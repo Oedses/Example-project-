@@ -1,0 +1,58 @@
+
+@import './../../styles/colors.scss';
+
+.auth-page {
+  max-width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+
+  .form__text {
+    margin-bottom: 12px !important;
+  }
+}
+
+.auth-page__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
+  }
+}
+
+.my-logo {
+  width: 100%;
+  max-width: 320px;
+  height: 40px;
+  margin-bottom: 96px;
+}
+
+.container {
+  position: absolute;
+}
+
+.form-locale {
+  &__container {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 12px;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__text {
+    color: $grey-dark;
+    font-weight: 300;
+  }
+}

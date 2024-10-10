@@ -1,0 +1,30 @@
+.list {
+  padding: 0;
+  margin-bottom: 24px;
+
+  display: flex;
+  justify-content: flex-start;
+
+  &-aligned {
+    li {
+      flex: 1 1 100%;
+    }
+  }
+
+
+  &-horizontal {
+    align-items: flex-end;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  &-vertical {
+    flex-direction: column;
+
+    .list-item {
+      margin: 8px 0;
+    }
+  }
+
+
+}

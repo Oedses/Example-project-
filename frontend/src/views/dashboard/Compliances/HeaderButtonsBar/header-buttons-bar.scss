@@ -1,0 +1,30 @@
+@import './../../../components/UI/List/list.scss';
+@import './../../../components/UI/List/ListItem/list-item.scss';
+@import "../../../../styles/mixins.scss";
+
+.buttons-container {
+  @include flex(row, flex-end);
+  margin-bottom: 16px;
+
+  @media screen and (max-width: 500px) {
+    @include flex(row, space-between);
+  }
+
+  @media screen and (max-width: 375px) {
+    flex-wrap: wrap;
+  }
+
+  button {
+    margin-left: 16px;
+
+    @media screen and (max-width: 500px) {
+      width: 90px;
+      min-width: 90px;
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 375px) {
+      margin-bottom: 16px;
+    }
+  }
+}

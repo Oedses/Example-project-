@@ -1,0 +1,20 @@
+@import './../../../../styles/colors.scss';
+@import './../../../../styles/mixins.scss';
+
+.compliance-tooltip {
+  &__container {
+    padding: 0.4rem 1rem;
+    background-color: $white;
+    border: 1px solid $grey-light;
+    box-shadow: -5px 8px 20px rgba(0, 153, 204, 0.201);
+    border-radius: 8px;
+  }
+
+  &__item {
+    @include flex(row, space-between, center);
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    gap: 16px;
+  }
+}

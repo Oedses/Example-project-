@@ -1,0 +1,145 @@
+.form-container {
+  text-align: center;
+  width: 416px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  &_signup,
+  &_create-investor {
+    width: 636px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form-container {
+    max-width: 90%;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.form {
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 153, 204, 0.04);
+  border-radius: 8px;
+
+  &-wrapper {
+    flex: 1 1 100%;
+    height: max-content;
+  }
+
+  &_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__heading {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 300;
+    color: #808080;
+    margin-bottom: 24px;
+  }
+
+  &__text:last-child {
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #0d6efd;
+    font-weight: 300;
+    text-decoration: none;
+  }
+
+  &__submit {
+    width: 100% !important;
+  }
+
+  &__inputs-wrapper {
+    margin-bottom: 24px;
+  }
+
+  &__row-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    & > .input {
+      margin-right: 16px;
+      max-width: 48.6%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    & > .select {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__buttons-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__buttons-container > .form__button {
+    width: auto;
+    padding: 8px 24px;
+  }
+
+  &__full-width-datepicker {
+    width: calc(100% - 53px);
+  }
+
+  &__entity-bg {
+    text-transform: capitalize;
+    background: #F5F5F5;
+    border-radius: 4px;
+    align-items: center;
+    padding: 8px;
+  }
+}
+
+.label {
+  font-size: 14px;
+  line-height: 22px;
+  color: $grey-dark;
+  font-weight: 300;
+  margin-right: auto;
+  margin-bottom: 4px;
+}

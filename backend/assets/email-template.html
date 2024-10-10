@@ -1,0 +1,130 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <style type="text/css" rel="stylesheet" media="all">
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .email__logo td {
+      background-image: url(https://TokyoCapital-frontend-dev.azurewebsites.net/assets/logo.png);
+      padding-bottom: 40px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 40px;
+    }
+
+    .email__footer .bottom-text {
+      padding-top: 32px;
+      text-align: center;
+    }
+
+    .email__wrapper {
+      padding: 50px;
+      width: 100%;
+      text-align: center;
+      background-color: #F9F9F9;
+    }
+
+    .email__wrapper,
+    .email__wrapper#wrapper td,
+    .email__wrapper#wrapper td p {
+      font-family: 'Source Sans Pro' !important;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      font-size: 16px !important;
+      line-height: 24px !important;
+    }
+
+    .white-block {
+      background: #FFFFFF;
+      border: 1px solid #F5F5F5;
+      box-sizing: border-box;
+      text-align: left;
+      padding: 32px;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .email__paragraph {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 32px;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .email__signup--credentials {
+      background: #F5F5F5;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 32px;
+    }
+
+    .email__signup--credentials-item {
+      margin: 0;
+      line-height: 24px;
+    }
+
+    .email__signup--credentials-item span{
+      font-weight: 700;
+    }
+
+    .gray-text {
+      color: #808080;
+    }
+
+    .blue-link {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .blue-link a {
+      color: #0099CC;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <table class="email__wrapper" id="wrapper" width="100%" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr class="email__logo">
+        <td background="https://TokyoCapital-frontend-dev.azurewebsites.net/assets/logo.png">
+          <!-- <img src="https://TokyoCapital-frontend-dev.azurewebsites.net/assets/logo.svg" /> -->
+        </td>
+      </tr>
+      <tr class="email__body">
+        <td>
+          <div class="white-block">
+            ${body}
+          </div>
+        </td>
+      </tr>
+      <tr class="email__footer">
+        <td>
+          <div class="bottom-text gray-text">
+            <p><b>tokyo Capital B.V.</b></p>
+            <p>Klein Heiligland 10<br>
+              2011 EG Haarlem</p>
+              <p class="blue-link">
+                <a href="https://tokyo.capital/privacy-statement/" target="_blank">Terms & conditions</a>
+              </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

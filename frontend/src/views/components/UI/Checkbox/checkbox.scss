@@ -1,0 +1,51 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/mixins.scss';
+
+.checkbox {
+  &__container {
+    @include flex(row, flex-start, center);
+    gap: 12px;
+    margin-top: 25px;
+    position: relative;
+    padding: 0 16px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    user-select: none;
+    border: 1px solid $grey-middle;
+    border-radius: 8px;
+    height: 43px;
+
+    text-align: left;
+    margin-bottom: 16px;
+    width: 50%;
+
+
+    input[type="checkbox"] {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__checked {
+    border: 1px solid $primary;
+    color: $primary;
+  }
+
+  &__disabled {
+    background-color: $grey-light;
+    cursor: not-allowed;
+  }
+
+}

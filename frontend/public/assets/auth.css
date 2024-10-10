@@ -1,0 +1,89 @@
+.panel {
+  border-radius: 8px;
+}
+
+.entry-item input {
+  font-size: 16px !important;
+  line-height: 24px !important;
+  border: 1px solid #DCDCDC !important;
+  box-shadow: 0px 8px 16px rgba(0, 153, 204, 0.04) !important;
+  border-radius: 8px !important;
+  padding-left: 10px !important;
+  height: 40px !important;
+}
+
+.entry-item input:focus {
+  border: 1px solid #0099CC !important;
+  outline: none !important;
+  caret-color: #0099CC !important;
+}
+
+#background_branding_container img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.create {
+  display: none !important;
+}
+
+.button {
+  margin: 0;
+}
+
+.buttons button {
+  width: 100% !important;
+  background: #0099CC !important;
+  margin-bottom: 0 !important;
+}
+
+.password-label {
+  display: flex;
+  justify-content: end;
+}
+
+.intro {
+  text-align: center !important;
+}
+
+.companyLogo {
+  margin-top: -150px !important;
+  margin-bottom: 80px !important;
+}
+
+.intro h2 {
+  display: none;
+}
+
+.form__heading {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  display: block !important;
+  text-transform: uppercase !important;
+  margin: 0 auto;
+}
+
+.form__description-wrapper {
+  margin: 16px 0 24px;
+  text-align: center;
+}
+
+.form__text {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 300;
+  color: #808080;
+}
+
+.form__link {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #0D6EFD;
+  font-weight: 300;
+  text-decoration: none;
+}

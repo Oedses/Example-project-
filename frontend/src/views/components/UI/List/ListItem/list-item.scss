@@ -1,0 +1,51 @@
+@import './../../../../../styles/colors.scss';
+
+.list-item {
+  display: inline-block;
+  width: max-content;
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+
+  &__label {
+    &-item {
+      display: inline-flex;
+    }
+    &-dot {
+      width: 8px !important;
+      height: 8px !important;
+      flex: 0 0 8px !important;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    font-size: 14px;
+    line-height: 22px;
+    color: $grey-dark;
+    margin-bottom: 4px;
+    margin: 0;
+  }
+
+  &__content {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin: 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__montserrat,
+  &__amount {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+  }
+}

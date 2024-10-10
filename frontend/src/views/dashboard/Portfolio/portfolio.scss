@@ -1,0 +1,17 @@
+ .portfolio {
+    &__summary {
+      h2 {
+        margin: 0;
+      }
+
+      @media screen and (max-width: 500px) {
+        .list.list-vertical {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__section {
+      margin-bottom: 24px;
+   }
+ }

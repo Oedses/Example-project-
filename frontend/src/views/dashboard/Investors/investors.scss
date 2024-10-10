@@ -1,0 +1,11 @@
+@import '../../../styles/mixins.scss';
+
+.header-container {
+  @include flex(row, space-between);
+
+  .investors {
+    &__search {
+      max-width: 520px;
+    }
+  }
+}

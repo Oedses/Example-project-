@@ -1,0 +1,17 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    project: {{ .Values.project }}
+spec:
+  selector:
+    app: {{ .Values.name }}
+    env: {{ .Values.env }}
+  type: ClusterIP
+  ports:
+  - name: app
+    port: 3001
+    targetPort: 3001

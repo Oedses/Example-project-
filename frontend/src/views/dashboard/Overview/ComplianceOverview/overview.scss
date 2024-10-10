@@ -1,0 +1,67 @@
+.admin-overview {
+  &__recieved-amount {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  &__chart-labels {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  &__chart-label {
+    display: inline-block;
+
+    &-dot {
+      display: inline-block;
+      margin-right: 10px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex: 0 0 12px;
+      margin-top: 5px;
+    }
+
+    &-item {
+      display: flex;
+    }
+  }
+
+  &__overview {
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__section {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 24px;
+
+    .table-wrapper tbody tr td {
+      padding: 0 16px;
+    }
+
+
+    &-footer {
+      margin-top: 24px;
+
+      button {
+        margin: 0 auto;
+      }
+    }
+
+  }
+  &__volume {
+    canvas {
+      max-height: 250px;
+    }
+  }
+  }

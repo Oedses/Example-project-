@@ -1,0 +1,310 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: proxy-bc-ui
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: bc-ui-dev
+  namespace: proxy-bc-ui
+subsets:
+  - addresses:
+      - ip: 40.119.128.163
+    ports:
+      - name: bc-ui-dev
+        port: 8181
+        protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bc-ui-dev
+  namespace: proxy-bc-ui
+spec:
+  ports:
+    - name: bc-ui-dev
+      port: 8181
+      protocol: TCP
+      targetPort: 8181
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-bc-ui-dev
+  namespace: proxy-bc-ui
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/session-cookie-hash: "sha1"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  labels:
+    project: "tokyo"
+spec:
+  tls:
+    - hosts:
+        -  bc-ui-dev.tokyo.api.okj.com
+  rules:
+    - host:  bc-ui-dev.tokyo.api.okj.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bc-ui-dev
+              servicePort: 8181
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: bc-dash-dev
+  namespace: proxy-bc-ui
+subsets:
+  - addresses:
+      - ip: 40.119.128.163
+    ports:
+      - name: bc-dash-dev
+        port: 3000
+        protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bc-dash-dev
+  namespace: proxy-bc-ui
+spec:
+  ports:
+    - name: bc-dash-dev
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-bc-dash-dev
+  namespace: proxy-bc-ui
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.org/websocket-services: "bc-dash-dev"
+  labels:
+    project: "tokyo"
+spec:
+  tls:
+    - hosts:
+        -  bc-dash-dev.tokyo.api.okj.com
+  rules:
+    - host:  bc-dash-dev.tokyo.api.okj.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bc-dash-dev
+              servicePort: 3000
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: bc-ui-test
+  namespace: proxy-bc-ui
+subsets:
+  - addresses:
+      - ip: 20.126.36.231
+    ports:
+      - name: bc-ui-test
+        port: 8181
+        protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bc-ui-test
+  namespace: proxy-bc-ui
+spec:
+  ports:
+    - name: bc-ui-test
+      port: 8181
+      protocol: TCP
+      targetPort: 8181
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-bc-ui-test
+  namespace: proxy-bc-ui
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/session-cookie-hash: "sha1"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  labels:
+    project: "tokyo"
+spec:
+  tls:
+    - hosts:
+        -  bc-ui-test.tokyo.api.okj.com
+  rules:
+    - host:  bc-ui-test.tokyo.api.okj.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bc-ui-test
+              servicePort: 8181
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: bc-dash-test
+  namespace: proxy-bc-ui
+subsets:
+  - addresses:
+      - ip: 20.126.36.231
+    ports:
+      - name: bc-dash-test
+        port: 3000
+        protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bc-dash-test
+  namespace: proxy-bc-ui
+spec:
+  ports:
+    - name: bc-dash-test
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-bc-dash-test
+  namespace: proxy-bc-ui
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.org/websocket-services: "bc-dash-test"
+  labels:
+    project: "tokyo"
+spec:
+  tls:
+    - hosts:
+        -  bc-dash-test.tokyo.api.okj.com
+  rules:
+    - host:  bc-dash-test.tokyo.api.okj.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bc-dash-test
+              servicePort: 3000
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: bc-ui-acc
+  namespace: proxy-bc-ui
+subsets:
+  - addresses:
+      - ip: 20.123.199.235
+    ports:
+      - name: bc-ui-acc
+        port: 8181
+        protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bc-ui-acc
+  namespace: proxy-bc-ui
+spec:
+  ports:
+    - name: bc-ui-acc
+      port: 8181
+      protocol: TCP
+      targetPort: 8181
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-bc-ui-acc
+  namespace: proxy-bc-ui
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/session-cookie-hash: "sha1"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  labels:
+    project: "tokyo"
+spec:
+  tls:
+    - hosts:
+        -  bc-ui-acc.tokyo.api.okj.com
+  rules:
+    - host:  bc-ui-acc.tokyo.api.okj.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bc-ui-acc
+              servicePort: 8181
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: bc-dash-acc
+  namespace: proxy-bc-ui
+subsets:
+  - addresses:
+      - ip: 20.123.199.235
+    ports:
+      - name: bc-dash-acc
+        port: 3000
+        protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bc-dash-acc
+  namespace: proxy-bc-ui
+spec:
+  ports:
+    - name: bc-dash-acc
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-bc-dash-acc
+  namespace: proxy-bc-ui
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.org/websocket-services: "bc-dash-acc"
+  labels:
+    project: "tokyo"
+spec:
+  tls:
+    - hosts:
+        -  bc-dash-acc.tokyo.api.okj.com
+  rules:
+    - host:  bc-dash-acc.tokyo.api.okj.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bc-dash-acc
+              servicePort: 3000

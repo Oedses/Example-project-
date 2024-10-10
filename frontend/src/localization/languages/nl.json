@@ -1,0 +1,1155 @@
+{
+  "close": "Sluiten",
+  "months": "maanden",
+  "years": "jaren",
+  "paymentFrequency": {
+    "Annually": "jaar",
+    "Biannually": "tweejaarlijks",
+    "Quarterly": "kwartaal"
+  },
+  "error": {
+    "validation": {
+      "required": "Vereist",
+      "mustBeANumber": "Moet een nummer zijn",
+      "valueIsNotLessPrice": "Kan niet lager zijn dan de prijs",
+      "mustBeAPositiveNumber": "Moet een positief getal zijn",
+      "mustbeGreaterThenZero": "Moet groter zijn dan 0",
+      "invalidListingDate": "Voer een datum in tussen 5 jaar geleden en 5 jaar vanaf nu",
+      "invalidMaturityDate": "Moet tussen 1 maand en 5 jaar zijn",
+      "invalidNonCallPeriod": "Moet tussen 1 maand en 10 jaar",
+      "invalid": "Ongeldig",
+      "invalidTransactionAmount": "Het transactiebedrag mag het productbedrag niet overschrijden",
+      "invalidRequestBuyAmount": "De gebruiker kan niet meer producten kopen dan het beschikbare volume",
+      "invalidTicketSize": "De minimale denominatie van het product is {{min}}",
+      "productExists": "Product met deze naam bestaat al",
+      "moreThanMaturity": "Kan niet meer zijn dan volwassenheid",
+      "maximumAvailableAmount": "Het maximaal beschikbare bedrag is overschreden",
+      "invalidListingDate2": "De datum van de lijst moet vandaag zijn of een willekeurige dag in het verleden.",
+      "invalidNonCallPeriodExpired": "Niet-oproepperiode is nog niet verstreken",
+      "userExists": "Gebruiker bestaat al",
+      "invalidRepeatNewPassword": "Moet overeenkomen met nieuw wachtwoord"
+    },
+    "backend": {
+      "notPermission": "Toegang geweigerd",
+      "notUser": "Gebruiker niet gevonden",
+      "notInvestor": "Investor not found",
+      "notIssuer": "Investeerder niet gevonden",
+      "notActiveIssuer": "U kunt een product met een inactieve uitgever niet goedkeuren",
+      "notNotification": "Melding niet gevonden",
+      "notProduct": "product niet gevonden",
+      "notCompliance": "Naleving niet gevonden",
+      "notComplianceReject": "U kunt uw eigen naleving niet afwijzen",
+      "notReceiverId": "Ontvanger-ID niet gevonden",
+      "notHolding": "Bedrijf niet gevonden",
+      "notActiveProduct": "Productstatus is niet actief",
+      "notPossibleDeactivationInvestor": "Deactiveren is niet mogelijk omdat deze belegger nog producten bezit",
+      "notPossibleDeactivationIssuer": "Deactiveren is niet mogelijk omdat deze uitgever nog producten bezit",
+      "notUserDeleted": "gebruiker niet verwijderd",
+      "notProductDeactivation": "U kunt het product niet deactiveren omdat het product transacties heeft die wachten op goedkeuring",
+      "notReturnTickets": "Je kunt geen tickets retourneren zolang Product actief is",
+      "invalidRequest": "Ongeldig verzoek",
+      "invalidComplianceAction": "Ongeldige naam van nalevingsactie",
+      "invalidMaximumAvailableAmount": "Het maximaal beschikbare bedrag is overschreden",
+      "notPossibleCreateSellTransaction": "Het is onmogelijk om het product te verkopen na de volledige terugbetaling",
+      "invalidOriginalAmount": "Het bedrag overschrijdt het oorspronkelijke bedrag",
+      "invalidContract": "Contract is niet geïmplementeerd",
+      "invalidNonCallPeriod": "Niet-oproepperiode mag niet groter zijn dan looptijd",
+      "invalidNonCallPeriodExpired": "Niet-oproepperiode is nog niet verstreken",
+      "invalidTransactionType": "Onbekend type transactie",
+      "invalidUserType": "Onbekend type gebruiker",
+      "invalidPeriodType": "Ongeldig type periode",
+      "complianceResolved": "Naleving is opgelost",
+      "productNameExists": "Product met deze naam bestaat al",
+      "sellYourself": "Je kunt een product niet aan jezelf verkopen",
+      "userPrincipalNameExist": "Gebruiker bestaat al",
+      "emailExist": "E-mail bestaat al",
+      "productPendingDeactivation": "U kunt geen transactie maken voor een product met een wachtende goedkeuring voor deactivering",
+      "isProductDeactivated": "Product al gedeactiveerd",
+      "isAccountDeactivated": "Account al gedeactiveerd",
+      "alreadySentWaitDecision": "Verzoek is al verzonden. wacht de beslissing a.u.b. af",
+      "wrongData": "Verkeerde data",
+      "repaymentAmountExceeds": "De geselecteerde investeerders zijn al terugbetaald",
+      "repaymentPendingApproval": "U moet wachten op de goedkeuring of afwijzing van de vorige transactie Betalingstype Terugbetaling",
+      "isInterestTransactionQuarter": "Transactie Betalingstype Rente is dit kwartaal betaald"
+    }
+  },
+  "menu": {
+    "breadcrumps": {
+      "issuers": "Uitgevers",
+      "investors": "Investeerders",
+      "products": "Producten"
+    },
+    "nav": {
+      "overview": "Overzicht",
+      "investors": "Investeerders",
+      "issuers": "Uitgevers",
+      "products": "Producten",
+      "transactions": "Transacties",
+      "complianceLog": "Nalevingslogboek"
+    },
+    "profile": "Mijn rekening",
+    "settings": "Instellingen",
+    "logout": "Uitloggen",
+    "changeLanguage": "Taal wijzigen",
+    "currentLanguage": "Huidige taal is: {{ currentLanguage }}."
+  },
+  "components": {
+    "select": {
+      "empty": "Geen items..."
+    },
+    "deleteAccount": {
+      "title": "Account verwijderen",
+      "subtitle": "Bevestig de verwijdering van {{email}}. Deze actie is niet omkeerbaar.",
+      "submit": "Account verwijderen"
+    },
+    "table": {
+      "status": {
+        "processing": "In behandeling",
+        "processed": "Verwerkt",
+        "pending": "In afwachting",
+        "active": "Actief",
+        "inactive": "Inactief",
+        "fulfilled": "Vervuld",
+        "finalizing": "Finaliseren",
+        "failed": "Mislukt",
+        "rejected": "Afgekeurd"
+      },
+      "products": {
+        "category": {
+          "bond": "Bond",
+          "certificate": "Certificaat",
+          "share": "Aandelen"
+        },
+        "type": {
+          "dividend": "Dividend",
+          "interest": "Rente"
+        },
+        "paymentFrequency": {
+          "quarterly": "Per kwartaal",
+          "biannually": "Halfjaarlijks",
+          "annually": "Jaarlijks"
+        }
+      },
+      "transactions": {
+        "type": {
+          "sell": "Verkopen",
+          "buy": "Kopen",
+          "payment": "Betaling",
+          "generic": "Algemene betaling",
+          "repayment": "Terugbetaling",
+          "interest": "Rente",
+          "dividend": "Dividend"
+        }
+      },
+      "investors": {
+        "type": {
+          "naturalPerson": "Natuurlijke persoon",
+          "legalEntity": "Juridische entiteit"
+        }
+      },
+      "complianceLog": {
+        "to": "voor",
+        "toAllInvestors": "aan alle investeerders",
+        "status": {
+          "initiated": "Geïnitieerd",
+          "accepted": "Geaccepteerd",
+          "rejected": "Afgekeurd"
+        },
+        "entity": {
+          "user": "Gebruiker",
+          "investor": "Investeerder",
+          "issuer": "Uitgever",
+          "product": "Product",
+          "transaction": "Transactie",
+          "admin": "Beheerder"
+        },
+        "action": {
+          "addUser": "Voeg gebruiker toe",
+          "addProduct": "Product toevoegen",
+          "buyTransaction": "Koop transactie",
+          "sellTransaction": "Transactie verkopen",
+          "paymentTransaction": "Betalingstransactie",
+          "paymentTransactionArray": "Betalingstransacties",
+          "updateUser": "Gebruiker bijwerken",
+          "deactivateUser": "Gebruiker deactiveren",
+          "deactivateProduct": "Product deactiveren",
+          "deleteUser": "Verwijder gebruiker",
+          "generic": "Algemene betaling",
+          "repayment": "Terugbetaling",
+          "interest": "Interesse",
+          "dividend": "Dividend"
+        }
+      }
+    },
+    "notifications": {
+      "readAll": "Markeer alles als gelezen",
+      "emptyState": "Nog geen meldingen...",
+      "more": "Meer",
+      "next": "Volgende 20",
+      "emptyNotification": "Voorlopig geen meldingen",
+      "messages": {
+        "newProduct": "Nieuw product {{productName}}",
+
+        "newTransactionBuy": "Nieuwe transactie Koop product {{productName}}",
+        "newTransactionSell": "Nieuwe transactie Verkoop product {{productName}}",
+        "newTransactionPayment": "Nieuw Transactie Betaalproduct {{productName}}",
+
+        "approveDeleteUser": "De {{ userRole }} {{ fullName }} is verwijderd",
+        "rejectDeleteUser": "Het verwijderingsverzoek voor de {{ userRole }} {{fullName}} is afgewezen.",
+        "approveDeactivateUser": "De {{ userRole }} {{ fullName }} is gedeactiveerd",
+        "rejectDeactivateUserAdmin": "Het account gedeactiveerd verzoek voor de {{ userRole }} {{ fullName }} is afgewezen.",
+
+        "approveDeactivateProductIssuer": "Het product {{ productName }} is gedeactiveerd.",
+        "rejectDeactivateProductIssuer": "De productdeactivering voor {{ productName }} is geweigerd.",
+        "approveDeactivateProductInvestor": "Beste belegger, de {{ productName }} wordt geschrapt. U wordt binnenkort gecontacteerd door een van de agenten van tokyo Capitals.",
+
+        "approveTransactionBuyIssuer": "Product {{ productName }} verkocht",
+        "approveTransactionBuyInvestor": "Product {{ productName }} gekocht",
+        "approveTransactionBuyAdmin": "Transactie Koop product {{ productName }} is goedgekeurd",
+        "rejectTransactionBuy": "Transactie Koop product {{ productName }} is afgewezen",
+
+        "approveTransactionSellIssuer": "Product {{ productName }} overgedragen",
+        "approveTransactionSellInvestor": "Bedrijf {{ productName }} verkocht",
+        "approveTransactionSellReceiver": "Product {{ productName }} gekocht",
+        "approveTransactionSellAdmin": "Transactie Verkoop product {{ productName }} is goedgekeurd",
+        "approveTransactionSellReturned": "Tickets van het product {{ productName }} zijn geretourneerd ",
+        "approveTransactionSellReturnedAdmin": "Transactie Verkoop om tickets van product {{ productName }} te retourneren is goedgekeurd",
+        "rejectTransactionSell": "Transactie Verkoop product {{ productName }} is afgewezen",
+        "rejectTransactionSellReturned": "Transactie Verkoop om tickets van product {{ productName }} te retourneren is afgewezen",
+
+        "approveTransactionPaymentIssuer": "Product {{ productName }} betaald",
+        "approveTransactionPaymentInvestor": "Product {{ productName }} betaald",
+        "approveTransactionPaymentAdmin": "Transactie Betaalproduct {{ productName }} is goedgekeurd",
+        "rejectTransactionPayment": "Transactie Betaalproduct {{ productName }} is afgewezen",
+        "deactivateProduct": "Product deactiveren {{ productName }}",
+
+        "requestDelistProduct": "Issuer {{ fullName }} wants to delist the product {{ productName }}",
+
+        "addUser": "Nieuwe {{userRole}} {{ fullName }}",
+        "updateUser": "{{userRole}} bijwerken {{ fullName }}",
+        "requestDeactivateUser": "{{userRole}} {{ fullName }} verzocht om zijn account te deactiveren",
+        "deactivateUser": "{{userRole}} deactiveren {{ fullName }}",
+        "deleteUser": "{{userRole}} verwijderen {{ fullName }}",
+        "requestBuy": "Investeerder {{ fullName }} wil het product {{ productName }} kopen voor {{ amount }}",
+        "remindForPayment": "Dit is een herinnering om driemaandelijkse rente te betalen",
+        "remindForMature": "Het product {{ productName }} rijpt over {{ countOfDaysForMaturity }} dagen",
+        "rejectDeactivateUser": "Het account gedeactiveerd verzoek voor de is geweigerd."
+      }
+    },
+    "badges": {
+      "all": "Alle"
+    }
+  },
+  "pages": {
+    "issuer": {
+      "inputPlaceholder": "Een uitgever zoeken",
+      "form": {
+        "edit": {
+          "title": "Uitgever bewerken",
+          "subtitle": "Wijzig het formulier om dit uitgevers account te bewerken. De uitgever wordt per e-mail op de hoogte gebracht van de wijzigingen"
+        },
+        "title": "Nieuwe uitgever",
+        "subtitle": "Vul het onderstaande formulier in om een nieuw uitgevers account aan te maken. Er wordt een e-mail naar het e-mailadres van de uitgever gestuurd om te bevestigen en een wachtwoord in te stellen.",
+        "name": "Naam uitgever",
+        "namePLaceholder": "Voer de naam van de uitgever in",
+        "kvk": "KvK-nummer",
+        "submit": "Uitgever opslaan",
+        "success": {
+          "title": "Nieuwe uitgever gemaakt",
+          "subtitle": "Er is een e-mail verzonden naar het e-mailadres van de uitgever om te bevestigen en een wachtwoord voor hun account in te stellen."
+        }
+      },
+      "overview": {
+        "title": "Welkom terug ",
+        "platformOverview": {
+          "title": "Platformoverzicht",
+          "summary": {
+            "outstandingAmount": "Totaal uitstaand kapitaal",
+            "issuedAmount": "Totaal uitgegeven bedrag",
+            "interest": "Totale rente vorige kwartaal"
+          },
+          "bar": {
+            "repaid": "Terugbetaald bedrag",
+            "outstandingAmount": "Uitstaand kapitaal"
+          }
+        },
+        "myProducts": {
+          "title": "Mijn producten",
+          "table": {
+            "header": {
+              "product": "Product",
+              "category": "Categorie",
+              "avialableVolume": "Beschikbaar volume",
+              "couponRate": "Coupon tarief",
+              "maturity": "Volwassenheid",
+              "status": "Status"
+            }
+          }
+        },
+        "myProductsTransactions": {
+          "title": "De recente transacties van mijn product",
+          "table": {
+            "header": {
+              "date": "Datum",
+              "type": "Type",
+              "investor": "Investeerder",
+              "product": "Product",
+              "amount": "Hoeveelheid",
+              "status": "Status"
+            }
+          }
+        }
+      },
+      "view": {
+        "edit": {
+          "success": "Uitgever succesvol bijgewerkt"
+        },
+        "deactivateError": {
+          "title": "Kan account niet deactiveren",
+          "subtitle": "Deactiveren is niet mogelijk omdat deze belegger nog producten bezit."
+        },
+        "deactivateSuccess": {
+          "title": "Verzoek om deactivering is verzonden!",
+          "subtitle": "Deactivering is mogelijk na goedkeuring"
+        },
+        "editDetails": "Uitgevergegevens bewerken",
+        "deactivate": "Gebruiker deactiveren",
+        "delete": "Account verwijderen",
+        "details": {
+          "title": "Gegevens van de uitgever",
+          "list": {
+            "status": "Satus",
+            "createdOn": "Gemaakt op",
+            "issuerName": "Naam uitgever:",
+            "email": "E-mail",
+            "phoneNumber": "Telefoonnummer",
+            "kvk": "KvK-nummer",
+            "vat": "VAT ID",
+            "address": "Adres",
+            "postcode": "Postcode",
+            "city": "Stad"
+          }
+        },
+        "summary": {
+          "title": "Samenvatting van de uitgever",
+          "list": {
+            "totalProducts": "Totaal producten",
+            "totalVolume": "Totale volume",
+            "totalInvestors": "Totaal investeerders",
+            "totalPayOut": "Totale uitbetaling"
+          }
+        },
+        "products": {
+          "title": "Producten van de uitgever",
+          "table": {
+            "empty": "Nog geen producten...",
+            "head": {
+              "product": "Product",
+              "category": "Categorie",
+              "avialableVolume": "Beschikbaar volume",
+              "paymentType": "Betalingswijze",
+              "couponRate": "Coupon tarief",
+              "maturity": "Volwassenheid",
+              "status": "Status"
+            }
+          }
+        },
+        "transactions": {
+          "title": "Transacties van de uitgever",
+          "table": {
+            "empty": "Nog geen transacties...",
+            "head": {
+              "date": "Datum",
+              "type": "Type",
+              "investor": "Investeerder",
+              "product": "Product",
+              "amount": "Hoeveelheid",
+              "status": "Status"
+            }
+          }
+        }
+      },
+      "issuerCategory": {
+        "processing": "In behandeling",
+        "active": "Actief",
+        "inactive": "Inactief",
+        "failed": "Mislukt",
+        "rejected": "Afgekeurd",
+        "all": "Alle"
+      }
+    },
+    "admin": {
+      "overview": {
+        "title": "Welkom terug ",
+        "platformOverview": {
+          "title": "Platformoverzicht",
+          "volume": "30 dagen volume",
+          "processing": "30 dagen verwerking",
+          "deposits": "30 dagen betalingen",
+          "transactions": "30-daagse transacties"
+        },
+        "transactionVolume": "Transactievolume",
+        "chart": {
+          "tooltip": {
+            "buyVolume": "Koop volume",
+            "sellVolume": "Verkoop volume",
+            "paymentVolume": "Betalingsvolume",
+            "totalVolume": "Totale volume",
+            "processingVolume": "Verwerkingsvolume"
+          }
+        },
+        "pendingInvestors": {
+          "title": "In afwachting van investeerders",
+          "table": {
+            "empty": "Nog geen investeerders...",
+            "head": {
+              "date": "Datum",
+              "investor": "Investeerder",
+              "type": "Type",
+              "email": "Email",
+              "amount": "Hoeveelheid",
+              "status": "Status"
+            }
+          },
+          "viewAll": "Bekijk alle investeerders"
+        },
+        "pendingProducts": {
+          "title": "Producten in behandeling",
+          "table": {
+            "empty": "Nog geen producten...",
+            "head": {
+              "product": "Product",
+              "issuer": "Uitgever",
+              "category": "Categorie",
+              "totalVolume": "Totale volume",
+              "paymentType": "Betalingswijze",
+              "couponRate": "Coupon tarief",
+              "maturity": "Volwassenheid",
+              "status": "Status"
+            }
+          },
+          "viewAll": "Bekijk alle producten"
+        },
+        "pendingTransactions": {
+          "title": "Wachtende Transacties",
+          "table": {
+            "empty": "Nog geen transacties...",
+            "head": {
+              "date": "Datum",
+              "investor": "Investeerder",
+              "type": "Type",
+              "product": "Product",
+              "amount": "Hoeveelheid",
+              "status": "Status"
+            }
+          },
+          "viewAll": "Bekijk alle transacties"
+        },
+        "complianceLog": {
+          "title": "Nalevingslogboek",
+          "approve": "Goedkeuren",
+          "reject": "Afwijzen",
+          "exportResults": "Resultaten exporteren",
+          "clearFilters": "Wis filters",
+          "showFilters": "Filters tonen",
+          "dateFrom": "Datum vanaf",
+          "dateTo": "Datum naar",
+          "any": "Iets",
+          "complianceStatus": {
+            "all": "Alle",
+            "initiated": "Geïnitieerd",
+            "accepted": "Geaccepteerd",
+            "rejected": "Afgekeurd"
+          },
+          "rejectForm": {
+            "title": "Actie afwijzen",
+            "subtitle": "Geef hieronder een reden voor afwijzing op.",
+            "placeholder": "Opmerking",
+            "error": {
+              "title": "Oeps! Er is iets fout gegaan..."
+            }
+          },
+          "table": {
+            "empty": "Nog geen nalevingslogboeken...",
+            "head": {
+              "date": "Datum",
+              "relatedBy": "Gerelateerd door",
+              "relatedTo": "Gerelateerd aan",
+              "action": "Actie",
+              "remarks": "Opmerkingen",
+              "status": "Status"
+            }
+          },
+          "viewAll": "Bekijk alle logboeken"
+        }
+      },
+      "issuers": {
+        "title": "Uitgevers",
+        "new": "Nieuwe uitgever",
+        "table": {
+          "head": {
+            "date": "Datum",
+            "name": "Naam uitgever",
+            "email": "E-mail",
+            "totalProducts": "Totaal producten",
+            "totalVolume": "Totale volume",
+            "status": "Status"
+          },
+          "empty": "Geen uitgevers gevonden..."
+        }
+      },
+      "complianceLog": {
+        "roleError": "Kan uw eigen niet goedkeuren",
+        "submit": "Afwijzing indienen"
+      }
+    },
+    "portfolio": {
+      "title": "Mijn portfolio",
+      "summary": "Mijn portfolio samenvatting",
+      "holdings": "Mijn portefeuilleposities",
+      "empty": "Nog geen portfoliogegevens...",
+      "table": {
+        "head": {
+          "holding": "Vasthouden",
+          "category": "Categorie",
+          "weight": "Gewicht",
+          "originalAmount": "Oorspronkelijke hoeveelheid",
+          "outstandingAmount": "Uitstaand kapitaal",
+          "amountRecieved": "Bedrag ontvangen",
+          "heldSince": "Gehouden sinds",
+          "maturityDate": "Vervaldatum",
+          "nonCallPeriod": "Niet-oproepperiode"
+        },
+        "empty": "Nog geen bezit..."
+      },
+      "chart": {
+        "tabs": {
+          "period": "Punt uit",
+          "yearToDate": "Jaar tot op heden"
+        }
+      }
+    },
+    "signUp": {
+      "form": {
+        "title": "Accountverzoek",
+        "subtitle": "Vul het onderstaande formulier in om een aanvraag voor een beleggersrekening in te dienen.",
+        "entityType": "Entiteitstype",
+        "entityTypes": {
+          "naturalPerson": "Natuurlijke persoon",
+          "lagalEntity": "Juridische entiteit"
+        },
+        "firstName": "Voornam(en)",
+        "lastName": "Achternaam",
+        "kvk": "KvK-nummer",
+        "companyName": "Bedrijfsnaam",
+        "email": "Email",
+        "phoneNumber": "Telefoonnummer",
+        "bsn": "BSN",
+        "streetAddress": "Adres",
+        "postalCode": "Postcode",
+        "city": "Stad",
+        "cancel": "Terug naar Inloggen",
+        "submit": "Accountverzoek indienen"
+      },
+      "success": {
+        "title": "Accountverzoek ingediend",
+        "subtitle": "Uw verzoek om een beleggersrekening is ingediend. Er wordt contact met u opgenomen om het proces verder te formaliseren.",
+        "buttonText": "Terug naar Inloggen"
+      }
+    },
+    "overview": {
+      "title": "Overzicht",
+      "chart": {
+        "tooltip": {
+          "totalAmount": "Totaal ontvangen bedrag",
+          "originalAmount": "Totaal oorspronkelijk bedrag"
+        }
+      },
+      "porifolio": {
+        "title": "Mijn portfolio overzicht",
+        "summary": {
+          "totalAmount": "Totaal ontvangen bedrag",
+          "originalAmount": "Totaal oorspronkelijk bedrag",
+          "yield": "Jaarlijks rendement"
+        },
+        "view": "Bekijk portfolio"
+      },
+      "news": {
+        "title": "Nieuws hoogtepunten",
+        "viewMore": "Meer nieuws bekijken",
+        "empty": "Nog geen nieuws..."
+      },
+      "products": {
+        "title": "Topproducten",
+        "table": {
+          "empty": "Nog geen producten...",
+          "header": {
+            "product": "Product",
+            "issuer": "Uitgever",
+            "category": "Categorie",
+            "avialableVolume": "Beschikbaar volume",
+            "couponRate": "Coupon tarief",
+            "maturity": "Volwassenheid"
+          },
+          "content": {
+            "categoryType": {
+              "share": "Aandelen",
+              "bond": "Bond",
+              "certificate": "Certificaat"
+            },
+            "status": {
+              "active": "Actief",
+              "inactive": "Inactief"
+            }
+          }
+        },
+        "viewMore": "Bekijk alle producten"
+      },
+      "transactions": {
+        "title": "Mijn laatste transacties",
+        "table": {
+          "empty": "Nog geen transacties...",
+          "header": {
+            "date": "Datum",
+            "type": "Type",
+            "product": "Product",
+            "amount": "Hoeveelheid",
+            "status": "Status"
+          },
+          "content": {
+            "type": {
+              "buy": "Koop",
+              "payment": "Betaling",
+              "sell": "Verkopen",
+              "generic": "Algemene betaling",
+              "repayment": "Terugbetaling",
+              "interest": "Interesse",
+              "dividend": "Dividend"
+            },
+            "status": {
+              "processing": "Verwerking",
+              "processed": "Verwerkt",
+              "rejected": "Afgekeurd",
+              "failed": "Mislukt"
+            }
+          }
+        },
+        "viewMore": "Bekijk alle transacties"
+      }
+    },
+    "investors": {
+      "title": "Investeerders",
+      "newInvestor": "Nieuwe investeerder",
+      "inputPlaceholder": "Zoek een investeerder",
+      "filters": {
+        "entityType": "Entiteitstype",
+        "startTotalProducts": "Start totaal producten",
+        "endTotalProducts": "Totaal producten beëindigen"
+      },
+      "form": {
+        "edit": {
+          "title": "Belegger bewerken"
+        },
+        "title": "Nieuwe investeerder",
+        "subtitle": "Vul onderstaand formulier in om een nieuw beleggers account aan te maken. Er wordt een e-mail naar het e-mailadres van de belegger gestuurd om te bevestigen en een wachtwoord in te stellen",
+        "success": {
+          "title": "Nieuwe investeerder gecreëerd",
+          "subtitle": "Er is een e-mail verzonden naar het e-mailadres van de belegger om te bevestigen en een wachtwoord voor hun account in te stellen"
+        },
+        "saveInvestor": "Investeerder opslaan"
+      },
+      "table": {
+        "empty": "Geen investeerders gevonden",
+        "head": {
+          "date": "Datum",
+          "entityType": "Entiteitstype",
+          "name": "Naam",
+          "email": "Email",
+          "totalPayments": "Totaal betalingen",
+          "totalProducts": "Totaal producten",
+          "status": "Status"
+        }
+      },
+      "view": {
+        "edit": {
+          "success": "Belegger succesvol bijgewerkt"
+        },
+        "deactivate": "Account deactiveren",
+        "delete": "Account verwijderen",
+        "deactivateError": {
+          "title": "Kan account niet deactiveren",
+          "subtitle": "Deactiveren is niet mogelijk omdat deze belegger nog producten bezit."
+        },
+        "deactivateSuccess": {
+          "title": "Verzoek om deactivering is verzonden!",
+          "subtitle": "Deactivering is mogelijk na goedkeuring"
+        },
+        "editDetails": {
+          "title": "Beleggersdetails bewerken",
+          "popup": {
+            "success": {
+              "title": "Verzoek om updates is verzonden!",
+              "subtitle": "Wijzigingen worden toegepast na goedkeuring"
+            }
+          }
+        },
+        "details": {
+          "title": "Investeerders gegevens",
+          "list": {
+            "firstName": "Voornam(en)",
+            "lastName": "Achternaam",
+            "companyName": "Bedrijfsnaam",
+            "bsn": "BSN",
+            "status": "Status",
+            "createdOn": "Gemaakt op",
+            "entityType": "Entiteitstype",
+            "email": "E-mail",
+            "phone": "Telefoonnummer",
+            "address": "Adres",
+            "postcode": "Postcode",
+            "city": "Stad"
+          }
+        },
+        "summary": {
+          "title": "Samenvatting van de beleggersportefeuille",
+          "list": {
+            "recieved": "Totaal ontvangen",
+            "payments": "Totaal oorspronkelijk bedrag",
+            "holdings": "Totaal bezit",
+            "transactions": "Totaal transacties"
+          }
+        },
+        "holdings": {
+          "title": "Beleggingen van investeerders",
+          "table": {
+            "empty": "Nog geen producten...",
+            "head": {
+              "holding": "Vasthouden",
+              "category": "Categorie",
+              "originalAmount": "Oorspronkelijke hoeveelheid",
+              "outstandingAmount": "Uitstaand kapitaal",
+              "amountRecieved": "Bedrag ontvangen",
+              "heldSince": "Gehouden sinds",
+              "maturityDate": "Vervaldatum",
+              "nonCallPeriod": "Niet-oproepperiode"
+            }
+          }
+        },
+        "transactions": {
+          "title": "Transacties van investeerders",
+          "table": {
+            "empty": "Nog geen transacties...",
+            "head": {
+              "date": "Datum",
+              "type": "Type",
+              "investor": "Investeerder",
+              "product": "Product",
+              "amount": "Hoeveelheid",
+              "status": "Status"
+            }
+          }
+        }
+      },
+      "investorCategory": {
+        "processing": "In behandeling",
+        "active": "Actief",
+        "inactive": "Inactief",
+        "failed": "Mislukt",
+        "rejected": "Afgekeurd",
+        "all": "Alle"
+      }
+    },
+    "products": {
+      "title": "Producten",
+      "newProduct": "Nieuw product",
+      "inputPlaceholder": "Zoek een product",
+      "filters": {
+        "issuer": "Uitgever",
+        "paymentType": "Betalingswijze",
+        "startCouponRate": "Begin coupon tarief",
+        "endCouponRate": "Einde coupon tarief"
+      },
+      "productCategory": {
+        "all": "Alle",
+        "bond": "Bond",
+        "certificate": "Certificaat",
+        "share": "Aandelen"
+      },
+      "table": {
+        "empty": "Geen producten gevonden",
+        "head": {
+          "product": "Product",
+          "category": "Categorie",
+          "issuer": "Uitgever",
+          "volume": "Beschikbaar volume",
+          "ticketSize": "Ticketgrootte",
+          "paymentType": "Betalingswijze",
+          "couponRate": "Coupon tarief",
+          "maturity": "Volwassenheid",
+          "status": "Status"
+        },
+        "foot": {
+          "show": "Toont {{from}} tot {{to}} van {{total}} resultaten",
+          "prevBtn": "Vorig {{delta}}",
+          "nextBtn": "Naast {{delta}}"
+        }
+      },
+      "form": {
+        "title": "Nieuw product",
+        "subtitle": "Vul onderstaand formulier in om een nieuw product aan te maken.",
+        "productName": "Productnaam",
+        "totalVolume": "Totale volume",
+        "quantity": "Aantal stuks",
+        "ticketSize": "Ticketgrootte",
+        "issuer": "Uitgever",
+        "selectIssuer": "Selecteer een uitgever",
+        "category": "Categorie",
+        "paymentType": "Betalingswijze",
+        "paymentFrequency": "Betalings frequentie",
+        "listingDate": "Aanbiedingsdatum:",
+        "listingDatePlaceholder": "Selecteer een datum",
+        "categoryPlaceholder": "Selecteer een categorie",
+        "submit": "Product opslaan",
+        "couponRate": "Coupon tarief",
+        "maturity": "Volwassenheid",
+        "maturityUnit": "Looptijdeenheid",
+        "nonCallPeriod": "Niet-oproepperiode",
+        "nonCallPeriodUnit": "Eenheid voor niet-oproepperiode",
+        "depository": "Bewaarder",
+        "isin": "ISIN",
+        "categories": {
+          "certificate": "Certificaat",
+          "bond": "Bond",
+          "share": "Aandelen"
+        },
+        "paymentTypes": {
+          "dividend": "Dividend",
+          "interest": "Rente"
+        },
+        "paymentFrequences": {
+          "quarterly": "Per kwartaal",
+          "biannually": "Halfjaarlijks",
+          "annually": "Jaarlijks"
+        }
+      },
+      "view": {
+        "deactivateProduct": "Product deactiveren",
+        "requestDelist": {
+          "success": {
+            "title": "Verzoek om deactivering is verzonden"
+          },
+          "fail": {
+            "title": "Deactiveren is niet mogelijk"
+          }
+        },
+        "headerTitle": "Producten",
+        "productDetails": {
+          "title": "Productdetails",
+          "issuer": "Uitgever",
+          "category": "Categorie",
+          "listingDate": "Genoteerd op",
+          "maturity": "Volwassenheid",
+          "nonCallPeriod": "Niet-oproepperiode",
+          "paymentFrequency": "Betalings frequentie",
+          "depository": "Bewaarder",
+          "isin": "ISIN"
+        },
+        "productOverview": {
+          "title": "Productoverzicht",
+          "totalVolume": "Totale volume",
+          "ticketSize": "Ticketgrootte",
+          "paymentType": "Betalingswijze",
+          "couponRate": "Coupon tarief",
+          "price": "Prijs",
+          "bar": {
+            "avialableVolume": "Beschikbaar volume",
+            "volumeSold": "Verkochte hoeveelheid",
+            "myHoldings": "Mijn bezit",
+            "reserved": "Gereserveerd volume"
+          }
+        },
+        "myHoldings": {
+          "title": "Mijn bezit",
+          "listData": {
+            "recievedAmount": "Totaal ontvangen bedrag",
+            "originalAmount": "Oorspronkelijk bedrag totaal",
+            "outstandingAmount": "Totaal uitstaand kapitaal"
+          },
+          "table": {
+            "emptyState": "Nog geen bezit...",
+            "head": {
+              "holding": "Vasthouden",
+              "originalAmount": "Oorspronkelijke hoeveelheid",
+              "outstandingCapital": "Uitstaand kapitaal",
+              "recievedAmount": "Bedrag ontvangen",
+              "heldSince": "Gehouden sinds",
+              "maturityDate": "Vervaldatum",
+              "nonCallPeriod": "Niet-oproepperiode"
+            }
+          }
+        },
+        "documents": {
+          "title": "Documenten",
+          "table": {
+            "emptyState": "Nog geen documenten...",
+            "head": {
+              "document": "Document",
+              "lastUpdated": "Laatst bijgewerkt"
+            }
+          }
+        },
+        "investors": {
+          "title": "Investeerders",
+          "table": {
+            "emptyState": "Nog geen investeerders...",
+            "head": {
+              "name": "Naam van de investeerder",
+              "tickets": "Aantal tickets",
+              "amount": "Hoeveelheid",
+              "status": "Status"
+            }
+          }
+        },
+        "transactions": {
+          "investorTitle": "Mijn transacties",
+          "title": "Transacties",
+          "returnTokens": "Geretourneerde tokens",
+          "table": {
+            "emptyState": "Nog geen transacties...",
+            "head": {
+              "investor": "Investeerder",
+              "tickets": "Kaartjes",
+              "date": "Datum",
+              "type": "Type",
+              "amount": "Hoeveelheid",
+              "status": "Status"
+            }
+          }
+        },
+        "requestBuy": {
+          "buttonText": "Aanvraag kopen",
+          "form": {
+            "title": "Aanvraag kopen",
+            "subtitle": "Vul het onderstaande formulier in om uw interesse in de aankoop van het product kenbaar te maken.",
+            "submit": "Aanvraag indienen",
+            "infoFields": {
+              "price": "Prijs",
+              "ticketSize": "Ticketgrootte",
+              "product": "Product"
+            },
+            "inputFields": {
+              "quantity": {
+                "label": "Aantal tickets",
+                "placeholder": "Vul het aantal tickets in"
+              },
+              "amount": {
+                "label": "Aankoopbedrag",
+                "placeholder": "Voer aankoopbedrag in"
+              }
+            },
+            "success": {
+              "title": "Koop gevraagd",
+              "subtitle": "Uw aankoopbelang is geregistreerd. Er wordt contact met u opgenomen om de aankoopprocedure te formaliseren."
+            }
+          }
+        }
+      },
+      "success": {
+        "title": "Nieuw product gemaakt",
+        "subtitle": "Het product wordt op de door u vastgestelde noteringsdatum genoteerd en zichtbaar voor beleggers."
+      }
+    },
+    "transactions": {
+      "title": "Transacties",
+      "investorTitle": "Mijn Transacties",
+      "newTransaction": "Nieuwe transactie",
+      "filters": {
+        "transactionType": "Transactie Type",
+        "investor": "Investeerder",
+        "product": "Product",
+        "status": "Satus"
+      },
+      "transactionsCategory": {
+        "processing": "In behandeling",
+        "processed": "Verwerkt",
+        "failed": "Mislukt",
+        "rejected": "Afgekeurd",
+        "all": "Alle"
+      },
+      "table": {
+        "empty": "Geen transacties gevonden",
+        "head": {
+          "date": "Datum",
+          "type": "Type",
+          "investor": "Investeerder",
+          "product": "Product",
+          "amount": "Hoeveelheid",
+          "status": "Status"
+        }
+      },
+      "form": {
+        "title": "Nieuwe transactie",
+        "amountReceived": "Te ontvangen bedrag",
+        "amountRepaid": "Terug te betalen bedrag",
+        "subtitle": "Vul onderstaand formulier in om een nieuw transactie aan te maken voor deze belegger.",
+        "transactionType": "Transactie Type",
+        "purchaseAmount": "Aankoopbedrag",
+        "investor": "Investeerder",
+        "paymentType": "Betalingswijze",
+        "product": "Product",
+        "amount": "Hoeveelheid",
+        "ticketSize": "Ticketgrootte",
+        "receiver": "Ontvanger",
+        "submit": "Transactie indienen",
+        "price": "Prijs",
+        "quantity": "Aantal stuks",
+        "transactionTypes": {
+          "buy": "Kopen",
+          "sell": "Verkopen",
+          "payment": "Betaling"
+        },
+        "amountPerFrequency": "Totaal bedrag betaald per {{ paymentFrequency }}",
+        "amountRepayment": "Totaal verkocht volume",
+        "investorPlaceholder": "Selecteer een investeerder",
+        "paymentTypePlaceholder": "Selecteer een betalingstype",
+        "productPlaceholder": "Selecteer een product",
+        "receiverPlaceholder": "Selecteer een ontvanger",
+        "returnTokensToIssuer": "Tokens kaartjes aan uitgever",
+        "table": {
+          "head": {
+            "investor": "Investeerder",
+            "tickets": "Kaartjes",
+            "interestReceived": "Te ontvangen rente",
+            "amountRepaid": "Terug te betalen bedrag"
+          }
+        }
+      },
+      "success": {
+        "title": "Nieuwe transactie ingediend",
+        "subtitle": "De transactie is ter beoordeling verzonden."
+      },
+      "details": {
+        "title": "Transactie details",
+        "transactionHash": "Transactiehash",
+        "copyTransactionHash": "Transactiehash gekopieerd"
+      }
+    },
+    "complianceLog": {
+      "title": "Nalevingslogboek",
+      "approve": "Actie goedkeuren",
+      "reject": "Reject",
+      "viewAll": "Bekijk alle logboeken",
+      "table": {
+        "empty": "Nog geen nalevingslogboeken...",
+        "head": {
+          "date": "Datum",
+          "relatedTo": "Gerelateerd aan",
+          "relatedBy": "Gerelateerd door",
+          "action": "Actie",
+          "remarks": "Opmerkingen",
+          "status": "Status"
+        }
+      },
+      "complianceStatus": {
+        "all": "Alle",
+        "initiated": "Geïnitieerd",
+        "accepted": "Geaccepteerd",
+        "rejected": "Afgekeurd"
+      },
+      "rejectForm": {
+        "title": "Actie afwijzen",
+        "subtitle": "Geef hieronder een reden voor afwijzing op.",
+        "placeholder": "Opmerking",
+        "error": {
+          "title": "Oeps! Er is iets fout gegaan..."
+        }
+      },
+      "details": {
+        "title": "Nalevingslogboekdetails",
+        "transactionHash": "Transactiehash",
+        "copyTransactionHash": "Transactiehash gekopieerd"
+      }
+    },
+    "myAccount": {
+      "title": "Mijn rekening",
+      "accountInformation": {
+        "title": "Mijn account informatie",
+        "accountDetailsChanged": "Gegevens van de rekeninghouder kunnen alleen schriftelijk of per e-mail worden gewijzigd. Dit wordt gedaan voor uw bescherming.",
+        "accountType": "Account type",
+        "firstName": "Voornam(en)",
+        "lastName": "Achternaam",
+        "kvk": "KvK-nummer",
+        "companyName": "Bedrijfsnaam",
+        "email": "Email",
+        "phoneNumber": "Telefoonnummer",
+        "bsn": "BSN",
+        "streetAddress": "Adres",
+        "postalCode": "Postcode",
+        "city": "Stad",
+        "cancel": "Terug naar Inloggen",
+        "submit": "Accountverzoek indienen",
+        "issuerName": "Naam uitgever:",
+        "vat": "VAT ID"
+      },
+      "securityPreferences": {
+        "title": "Mijn beveiligingsvoorkeuren",
+        "text": "De volgende informatie wordt gebruikt voor toegang tot en herstel van uw account.",
+        "email": "Email",
+        "phoneNumber": "Telefoonnummer",
+        "changePassword": "Verander wachtwoord",
+        "changeEmail": "E-mailadres wijzigen",
+        "changePhone": "Wijziging telefoonnummer"
+      },
+      "changePasswordPopup": {
+        "title": "Verander wachtwoord",
+        "subtitle": "Om uw wachtwoord te wijzigen, vult u tweemaal uw huidige wachtwoord en uw nieuwe wachtwoord in.",
+        "newPassword": "Nieuw paswoord",
+        "newPasswordPLaceholder": "Voer nieuw wachtwoord in",
+        "repeatNewPassword": "Herhaal nieuw wachtwoord",
+        "repeatNewPasswordPLaceholder": "Voer herhaal nieuw wachtwoord in",
+        "continue": "Doorgaan"
+      },
+      "verifyPasswordPopup": {
+        "title": "Verifieer wachtwoord",
+        "subtitle": "Er is een e-mail verzonden naar {{email}}. Voer de verificatiecode in de e-mail in om door te gaan.",
+        "verificationCode": "Verificatie code",
+        "verificationCodePLaceholder": "Voer verificatiecode in",
+        "resendIn": "Code niet ontvangen? Opnieuw insturen",
+        "submit": "Controleer en voltooi",
+        "success": {
+          "title": "wachtwoord veranderd",
+          "subtitle": "U kunt nu inloggen of uw account herstellen met het bijgewerkte wachtwoord."
+        }
+      },
+      "changeEmailPopup": {
+        "title": "E-mailadres wijzigen",
+        "subtitle": "Voer het e-mailadres in waaraan u uw account wilt koppelen.",
+        "email": "E-mailadres",
+        "emailPLaceholder": "Vul email adres in",
+        "continue": "Doorgaan"
+      },
+      "verifyEmailPopup": {
+        "title": "Bevestig e-mail adres",
+        "subtitle": "Er is een e-mail verzonden naar {{email}}. Voer de verificatiecode in de e-mail in om door te gaan.",
+        "verificationCode": "Verificatie code",
+        "verificationCodePLaceholder": "Voer verificatiecode in",
+        "resendIn": "Code niet ontvangen? Opnieuw insturen",
+        "submit": "Controleer en voltooi",
+        "success": {
+          "title": "E-mailadres gewijzigd",
+          "subtitle": "U kunt nu inloggen of uw account herstellen met het bijgewerkte e-mailadres."
+        }
+      },
+      "changePhonePopup": {
+        "title": "Telefoonnummer wijzigen",
+        "subtitle": "Voer het telefoonnummer in waaraan u uw account wilt koppelen.",
+        "phone": "Telefoonnummer",
+        "save": "Nieuwe telefoon opslaan",
+        "success": {
+          "title": "Telefoonnummer gewijzigd",
+          "subtitle": "U kunt zich nu verifiëren met het bijgewerkte telefoonnummer."
+        }
+      }
+    }
+  }
+}

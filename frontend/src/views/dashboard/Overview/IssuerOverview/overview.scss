@@ -1,0 +1,31 @@
+.issuer-overview {
+  &__summary {
+    padding-bottom: 0;
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__section {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 24px;
+
+    .table-wrapper tbody tr td {
+      padding: 0 16px;
+    }
+
+    &-footer {
+      margin-top: 24px;
+
+      button {
+        margin: 0 auto;
+      }
+    }
+
+    canvas {
+      max-height: 250px;
+    }
+  }
+}

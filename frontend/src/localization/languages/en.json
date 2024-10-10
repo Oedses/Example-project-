@@ -1,0 +1,1154 @@
+{
+  "close": "Close",
+  "months": "months",
+  "years": "years",
+  "paymentFrequency": {
+    "Annually": "year",
+    "Biannually": "binnual",
+    "Quarterly": "quarter"
+  },
+  "error": {
+    "validation": {
+      "required": "Required",
+      "mustBeANumber": "Must be a number",
+      "valueIsNotLessPrice": "Cannot be less than the price",
+      "mustBeAPositiveNumber": "Must be a positive number",
+      "mustbeGreaterThenZero": "Must be greater than 0",
+      "invalidListingDate": "Please enter a date between 5 years ago and 5 years from now",
+      "invalidMaturityDate": "Must be between 1 month and 5 years",
+      "invalidNonCallPeriod": "Must be between 1 month and 10 years",
+      "invalid": "Invalid",
+      "invalidTransactionAmount": "Transaction amount must not exceed the available volume",
+      "invalidRequestBuyAmount": "The user can't buy more products than the available volume",
+      "invalidTicketSize": "The minimum denomination of the product is {{min}}",
+      "productExists": "Product with this name already exists",
+      "moreThanMaturity": "Cannot be more than maturity",
+      "maximumAvailableAmount": "The maximum available amount is exceeded",
+      "invalidListingDate2": "Listing date must be today or any day in the past.",
+      "invalidNonCallPeriodExpired": "Non call period has not yet expired",
+      "userExists": "User already exists",
+      "invalidRepeatNewPassword": "Must match new password"
+    },
+    "backend": {
+      "notPermission": "Access denied",
+      "notUser": "User not found",
+      "notInvestor": "Investor not found",
+      "notIssuer": "Issuer not found",
+      "notActiveIssuer": "You cannot approve a product with an inactive Issuer",
+      "notNotification": "Notification not found",
+      "notProduct": "Product not found",
+      "notCompliance": "Compliance not found",
+      "notComplianceReject": "You can not reject your own compliance",
+      "notReceiverId": "ReceiverId not found",
+      "notHolding": "Holding not found",
+      "notActiveProduct": "Product status is not Active",
+      "notPossibleDeactivationInvestor": "Deactivation is not possible because this investor still owns products",
+      "notPossibleDeactivationIssuer": "Deactivation is not possible because this issuer still owns products",
+      "notUserDeleted": "user not deleted",
+      "notProductDeactivation": "You cannot deactivate the product because the product has transactions pending approval",
+      "notReturnTickets": "You can’t return tickets as long as Product is active",
+      "invalidRequest": "Invalid request",
+      "invalidComplianceAction": "Invalid compliance action name",
+      "invalidMaximumAvailableAmount": "The maximum available amount is exceeded",
+      "notPossibleCreateSellTransaction": "It's impossible to sell the product after the full repayment",
+      "invalidOriginalAmount": "The amount exceeds the original amount",
+      "invalidContract": "Contract is not deployed",
+      "invalidNonCallPeriod": "Non-call period cannot be bigger than maturity",
+      "invalidNonCallPeriodExpired": "Non call period has not yet expired",
+      "invalidTransactionType": "Unknown type of transaction",
+      "invalidUserType": "Unknown type of user",
+      "invalidPeriodType": "Invalid type of period",
+      "complianceResolved": "Compliance is resolved",
+      "productNameExists": "Product with this name already exists",
+      "sellYourself": "You can't sell a product to yourself",
+      "userPrincipalNameExist": "User already exists",
+      "emailExist": "Email is already exist",
+      "productPendingDeactivation": "You cannot create a transaction for a product with a pending deactivation approval",
+      "isProductDeactivated": "Product already deactivated",
+      "isAccountDeactivated": "Account already deactivated",
+      "alreadySentWaitDecision": "Request was already sent. please wait the decision",
+      "wrongData": "Wrong data",
+      "repaymentAmountExceeds": "The selected investors have already been repaid",
+      "repaymentPendingApproval": "You need to wait for the approval or rejection of the previous transaction Payment Type Repayment",
+      "isInterestTransactionQuarter": "Transaction Payment Type Interest was made this quarter"
+    }
+  },
+  "menu": {
+    "breadcrumps": {
+      "issuers": "Issuers",
+      "investors": "Investors",
+      "products": "Products"
+    },
+    "nav": {
+      "overview": "Overview",
+      "investors": "Investors",
+      "issuers": "Issuers",
+      "products": "Products",
+      "transactions": "Transactions",
+      "complianceLog": "Compliance log"
+    },
+    "profile": "My account",
+    "settings": "Settings",
+    "logout": "Logout",
+    "changeLanguage": "Change language",
+    "currentLanguage": "Current language is: {{ currentLanguage }}."
+  },
+  "components": {
+    "select": {
+      "empty": "No items..."
+    },
+    "deleteAccount": {
+      "title": "Delete account",
+      "subtitle": "Please confirm the deletion of {{email}}. This action is not reversible.",
+      "submit": "Delete account"
+    },
+    "table": {
+      "status": {
+        "processing": "Processing",
+        "processed": "Processed",
+        "pending": "Pending",
+        "active": "Active",
+        "inactive": "Inactive",
+        "fulfilled": "Fulfilled",
+        "finalizing": "Finalizing",
+        "failed": "Failed",
+        "rejected": "Rejected"
+      },
+      "products": {
+        "category": {
+          "bond": "Bond",
+          "certificate": "Certificate",
+          "share": "Share"
+        },
+        "type": {
+          "dividend": "Dividend",
+          "interest": "Interest"
+        },
+        "paymentFrequency": {
+          "quarterly": "Quarterly",
+          "biannually": "Biannually",
+          "annually": "Annually"
+        }
+      },
+      "transactions": {
+        "type": {
+          "sell": "Sell",
+          "buy": "Buy",
+          "payment": "Payment",
+          "generic": "Generic Payment",
+          "repayment": "Repayment",
+          "interest": "Interest",
+          "dividend": "Dividend"
+        }
+      },
+      "investors": {
+        "type": {
+          "naturalPerson": "Natural person",
+          "legalEntity": "Legal entity"
+        }
+      },
+      "complianceLog": {
+        "to": "to",
+        "toAllInvestors": "to all investors",
+        "status": {
+          "initiated": "Initiated",
+          "accepted": "Accepted",
+          "rejected": "Rejected"
+        },
+        "entity": {
+          "user": "User",
+          "investor": "Investor",
+          "issuer": "Issuer",
+          "product": "Product",
+          "transaction": "Transaction",
+          "admin": "Admin"
+        },
+        "action": {
+          "addUser": "Add User",
+          "addProduct": "Add Product",
+          "buyTransaction": "Buy Transaction",
+          "sellTransaction": "Sell Transaction",
+          "paymentTransaction": "Payment Transaction",
+          "paymentTransactionArray": "Payment Transactions",
+          "updateUser": "Update User",
+          "deactivateUser": "Deactivate User",
+          "deactivateProduct": "Deactivate Product",
+          "deleteUser": "Delete User",
+          "generic": "Generic Payment",
+          "repayment": "Repayment",
+          "interest": "Interest",
+          "dividend": "Dividend"
+        }
+      }
+    },
+    "notifications": {
+      "readAll": "Mark all as read",
+      "emptyState": "No notifications yet...",
+      "more": "More",
+      "next": "Next 20",
+      "emptyNotification": "No notifications for now",
+      "messages": {
+        "newProduct": "New Product {{productName}}",
+
+        "newTransactionBuy": "New Transaction Buy product {{ productName }}",
+        "newTransactionSell": "New Transaction Sell product {{ productName }}",
+        "newTransactionPayment": "New Transaction Payment product {{ productName }}",
+
+        "approveDeleteUser": "The {{ userRole }} {{ fullName }} is deleted",
+        "rejectDeleteUser": "The deletion request for the {{ userRole }} {{ fullName }} was denied.",
+
+        "approveDeactivateUser": "The {{ userRole }} {{ fullName }} is deactivated",
+        "rejectDeactivateUserAdmin": "The account deactivated request for the {{ userRole }} {{ fullName }} was denied.",
+
+        "approveDeactivateProductIssuer": "The product {{ productName }} is deactivated.",
+        "rejectDeactivateProductIssuer": "The product deactivation for {{ productName }} was denied.",
+        "approveDeactivateProductInvestor": "Dear investor, the {{ productName }} will be delisted. You will be contacted by one of tokyo Capitals' agents soon.",
+
+        "approveTransactionBuyIssuer": "Product {{ productName }} sold",
+        "approveTransactionBuyInvestor": "Product {{ productName }} purchased",
+        "approveTransactionBuyAdmin": "Transaction Buy product {{ productName }} was approved",
+        "rejectTransactionBuy": "Transaction Buy product {{ productName }} was rejected",
+
+        "approveTransactionSellIssuer": "Product {{ productName }} transferred",
+        "approveTransactionSellInvestor": "Holding {{ productName }} sold",
+        "approveTransactionSellReceiver": "Product {{ productName }} purchased",
+        "approveTransactionSellAdmin": "Transaction Sell product {{ productName }} was approved",
+        "approveTransactionSellReturned": "Tickets of product {{ productName }} was returned",
+        "approveTransactionSellReturnedAdmin": "Transaction Sell to return tickets of product {{ productName }} was approved",
+        "rejectTransactionSell": "Transaction Sell product {{ productName }} was rejected",
+        "rejectTransactionSellReturned": "Transaction Sell to return tickets of product {{ productName }} was rejected",
+
+        "approveTransactionPaymentIssuer": "Product {{ productName }} paid",
+        "approveTransactionPaymentInvestor": "Product {{ productName }} paid",
+        "approveTransactionPaymentAdmin": "Transaction Payment of product {{ productName }} was approved",
+        "rejectTransactionPayment": "Transaction Payment of product {{ productName }} was rejected",
+        "deactivateProduct": "Deactivate product {{ productName }}",
+
+        "requestDelistProduct": "Issuer {{ fullName }} wants to delist the product {{ productName }}",
+
+        "addUser": "New {{userRole}} {{ fullName }}",
+        "updateUser": "Update {{userRole}} {{ fullName }}",
+        "requestDeactivateUser": "{{userRole}} {{ fullName }} requested to deactivate his account",
+        "deactivateUser": "Deactivate {{userRole}} {{ fullName }}",
+        "deleteUser": "Delete {{userRole}} {{ fullName }}",
+        "requestBuy": "Investor {{ fullName }} wants to buy the product {{ productName }} for {{ amount }}",
+        "remindForPayment": "This is a reminder to pay quarterly interest",
+        "remindForMature": "The product {{ productName }} will mature in {{ countOfDaysForMaturity }} days",
+        "rejectDeactivateUser": "The account deactivated request for the was denied."
+      }
+    },
+    "badges": {
+      "all": "All"
+    }
+  },
+  "pages": {
+    "issuer": {
+      "inputPlaceholder": "Search for an issuer",
+      "form": {
+        "edit": {
+          "title": "Edit issuer",
+          "subtitle": "Change the form to edit this issuer account. The issuer will be notified by the changes by email"
+        },
+        "title": "New issuer",
+        "subtitle": "Fill in the form below to create a new issuer account. An email will be sent to the issuer’s email address for them to confirm and set a password.",
+        "name": "Issuer name",
+        "namePLaceholder": "Enter issuer`s name",
+        "kvk": "KvK Number",
+        "submit": "Save issuer",
+        "success": {
+          "title": "New issuer created",
+          "subtitle": "An email has been sent to the issuer’s email address for them to confirm and set a password for their account."
+        }
+      },
+      "overview": {
+        "title": "Welcome Back ",
+        "platformOverview": {
+          "title": "Platform overview",
+          "summary": {
+            "outstandingAmount": "Total outstanding capital",
+            "issuedAmount": "Total issued amount",
+            "interest": "Total interest previous quarter"
+          },
+          "bar": {
+            "repaid": "Repaid amount",
+            "outstandingAmount": "Outstanding capital"
+          }
+        },
+        "myProducts": {
+          "title": "My Products",
+          "table": {
+            "header": {
+              "product": "Product",
+              "category": "Category",
+              "avialableVolume": "Available volume",
+              "couponRate": "Coupon rate",
+              "maturity": "Maturity",
+              "status": "Status"
+            }
+          }
+        },
+        "myProductsTransactions": {
+          "title": "My recent Transactions",
+          "table": {
+            "header": {
+              "date": "Date",
+              "type": "Type",
+              "investor": "Investor",
+              "product": "Product",
+              "amount": "Amount",
+              "status": "Status"
+            }
+          }
+        }
+      },
+      "view": {
+        "edit": {
+          "success": "Issuer successfully updated"
+        },
+        "deactivateError": {
+          "title": "Unable to deactivate account",
+          "subtitle": "Deactivation is not possible because this investor still owns products."
+        },
+        "deactivateSuccess": {
+          "title": "Request for deactivation was sent!",
+          "subtitle": "Deactivation will be possible after approval"
+        },
+        "editDetails": "Edit issuer details",
+        "deactivate": "Deactivate user",
+        "delete": "Delete account",
+        "details": {
+          "title": "Issuer details",
+          "list": {
+            "status": "Status",
+            "createdOn": "Created on",
+            "issuerName": "Issuer Name",
+            "email": "Email",
+            "phoneNumber": "Phone number",
+            "kvk": "KvK Number",
+            "vat": "VAT ID",
+            "address": "Street address",
+            "postcode": "Postcode",
+            "city": "City"
+          }
+        },
+        "summary": {
+          "title": "Issuer Summary",
+          "list": {
+            "totalProducts": "Total products",
+            "totalVolume": "Total volume",
+            "totalInvestors": "Total investors",
+            "totalPayOut": "Total pay-out"
+          }
+        },
+        "products": {
+          "title": "Products",
+          "table": {
+            "empty": "No products yet...",
+            "head": {
+              "product": "Product",
+              "category": "Category",
+              "avialableVolume": "Available volume",
+              "paymentType": "Payment type",
+              "couponRate": "Coupon rate",
+              "maturity": "Maturity",
+              "status": "Status"
+            }
+          }
+        },
+        "transactions": {
+          "title": "Transactions",
+          "table": {
+            "empty": "No transsactions yet...",
+            "head": {
+              "date": "Date",
+              "type": "Type",
+              "investor": "Investor",
+              "product": "Product",
+              "amount": "Amount",
+              "status": "Status"
+            }
+          }
+        }
+      },
+      "issuerCategory": {
+        "processing": "Processing",
+        "active": "Active",
+        "inactive": "Inactive",
+        "failed": "Failed",
+        "rejected": "Rejected",
+        "all": "All"
+      }
+    },
+    "admin": {
+      "overview": {
+        "title": "Welcome back ",
+        "platformOverview": {
+          "title": "Platform overview",
+          "volume": "30-day volume",
+          "processing": "30-day processing",
+          "deposits": "30-day payments",
+          "transactions": "30-day transactions"
+        },
+        "transactionVolume": "Transaction volume",
+        "chart": {
+          "tooltip": {
+            "buyVolume": "Buy volume",
+            "sellVolume": "Sell volume",
+            "paymentVolume": "Payment volume",
+            "totalVolume": "Total volume",
+            "processingVolume": "Processing volume"
+          }
+        },
+        "pendingInvestors": {
+          "title": "Pending Investors",
+          "table": {
+            "empty": "No investors yet...",
+            "head": {
+              "date": "Date",
+              "investor": "Investor",
+              "type": "Type",
+              "email": "Email",
+              "amount": "Amount",
+              "status": "Status"
+            }
+          },
+          "viewAll": "View all investors"
+        },
+        "pendingProducts": {
+          "title": "Pending Products",
+          "table": {
+            "empty": "No products yet...",
+            "head": {
+              "product": "Product",
+              "issuer": "Issuer",
+              "category": "Category",
+              "totalVolume": "Total volume",
+              "paymentType": "Payment type",
+              "couponRate": "Coupon rate",
+              "maturity": "Maturity",
+              "status": "Status"
+            }
+          },
+          "viewAll": "View all products"
+        },
+        "pendingTransactions": {
+          "title": "Pending Transactions",
+          "table": {
+            "empty": "No transactions yet...",
+            "head": {
+              "date": "Date",
+              "investor": "Investor",
+              "type": "Type",
+              "product": "Product",
+              "amount": "Amount",
+              "status": "Status"
+            }
+          },
+          "viewAll": "View all transactions"
+        },
+        "complianceLog": {
+          "title": "Compliance log",
+          "approve": "Approve",
+          "reject": "Reject",
+          "exportResults": "Export results",
+          "showFilters": "Show filters",
+          "clearFilters": "Clear filters",
+          "dateFrom": "Date from",
+          "dateTo": "Date to",
+          "any": "Any",
+          "complianceStatus": {
+            "all": "All",
+            "initiated": "Initiated",
+            "accepted": "Accepted",
+            "rejected": "Rejected"
+          },
+          "rejectForm": {
+            "title": "Reject action",
+            "subtitle": "Please provide a reason for rejection below.",
+            "placeholder": "Remark",
+            "error": {
+              "title": "Oops! Something went wrong..."
+            }
+          },
+          "table": {
+            "empty": "No compliance logs yet...",
+            "head": {
+              "date": "Date",
+              "relatedBy": "Related by",
+              "relatedTo": "Related to",
+              "action": "Action",
+              "remarks": "Remarks",
+              "status": "Status"
+            }
+          },
+          "viewAll": "View all logs"
+        }
+      },
+      "issuers": {
+        "title": "Issuers",
+        "new": "New issuer",
+        "table": {
+          "head": {
+            "date": "Date",
+            "name": "Issuer name",
+            "email": "Email",
+            "totalProducts": "Total products",
+            "totalVolume": "Total volume",
+            "status": "Status"
+          },
+          "empty": "No issuers found..."
+        }
+      },
+      "complianceLog": {
+        "roleError": "Unable to approve your own",
+        "submit": "Submit rejection"
+      }
+    },
+    "portfolio": {
+      "title": "My portfolio",
+      "summary": "My portfolio summary",
+      "holdings": "My portfolio holdings",
+      "empty": "No portfolio data yet...",
+      "table": {
+        "head": {
+          "holding": "Holding",
+          "category": "Category",
+          "weight": "Weight",
+          "originalAmount": "Original amount",
+          "outstandingAmount": "Outstanding capital",
+          "amountRecieved": "Amount received",
+          "heldSince": "Held since",
+          "maturityDate": "Maturity date",
+          "nonCallPeriod": "Non-call period"
+        },
+        "empty": "No holdings yet..."
+      },
+      "chart": {
+        "tabs": {
+          "period": "Period",
+          "yearToDate": "Year to date"
+        }
+      }
+    },
+    "signUp": {
+      "form": {
+        "title": "Account request",
+        "subtitle": "Fill in the form below to submit an investor account request.",
+        "entityType": "Entity type",
+        "entityTypes": {
+          "naturalPerson": "Natural person",
+          "lagalEntity": "Legal Entity"
+        },
+        "firstName": "First name(s)",
+        "lastName": "Last name",
+        "kvk": "KvK Number",
+        "companyName": "Company name",
+        "email": "Email",
+        "phoneNumber": "Phone number",
+        "bsn": "BSN",
+        "streetAddress": "Street address",
+        "postalCode": "Post code",
+        "city": "City",
+        "cancel": "Back to login",
+        "submit": "Submit account request"
+      },
+      "success": {
+        "title": "Account request submitted",
+        "subtitle": "Your investor account request has been submitted. You will be contacted to further formalize the process.",
+        "buttonText": "Back to login"
+      }
+    },
+    "overview": {
+      "title": "Welcome back ",
+      "chart": {
+        "tooltip": {
+          "totalAmount": "Total amount received",
+          "originalAmount": "Total original amount"
+        }
+      },
+      "porifolio": {
+        "title": "My Portfolio Summary",
+        "summary": {
+          "totalAmount": "Total amount received",
+          "originalAmount": "Total original amount",
+          "yield": "Annualized yield"
+        },
+        "view": "View portfolio"
+      },
+      "news": {
+        "title": "News highlights",
+        "viewMore": "View more news",
+        "empty": "No news yet..."
+      },
+      "products": {
+        "title": "Top products",
+        "table": {
+          "empty": "No products yet...",
+          "header": {
+            "product": "Product",
+            "issuer": "Issuer",
+            "category": "Category",
+            "avialableVolume": "Available volume",
+            "couponRate": "Coupon rate",
+            "maturity": "Maturity"
+          },
+          "content": {
+            "categoryType": {
+              "share": "Share",
+              "bond": "Bond",
+              "certificate": "Certificate"
+            },
+            "status": {
+              "active": "Active",
+              "inactive": "Inactive"
+            }
+          }
+        },
+        "viewMore": "View all products"
+      },
+      "transactions": {
+        "title": "My latest transactions ",
+        "table": {
+          "empty": "No transactions yet...",
+          "header": {
+            "date": "Date",
+            "type": "Type",
+            "product": "Product",
+            "amount": "Amount",
+            "status": "Status"
+          },
+          "content": {
+            "type": {
+              "buy": "Buy",
+              "payment": "Payment",
+              "sell": "Sell",
+              "generic": "Generic Payment",
+              "repayment": "Repayment",
+              "interest": "Interest",
+              "dividend": "Dividend"
+            },
+            "status": {
+              "processing": "Processing",
+              "processed": "Processed",
+              "rejected": "Rejected",
+              "failed": "Failed"
+            }
+          }
+        },
+        "viewMore": "View all transactions"
+      }
+    },
+    "investors": {
+      "title": "Investors",
+      "newInvestor": "New Investor",
+      "inputPlaceholder": "Search for an investor",
+      "filters": {
+        "entityType": "Entity type",
+        "startTotalProducts": "Start total products",
+        "endTotalProducts": "End total products"
+      },
+      "form": {
+        "edit": {
+          "title": "Edit investor"
+        },
+        "title": "New investor",
+        "subtitle": "Fill in the form below to create a new investor account. An email will be sent to the investor’s email address for them to confirm and set a password.",
+        "success": {
+          "title": "New investor created",
+          "subtitle": "An email has been sent to the investor’s email address for them to confirm and set a password for their account."
+        },
+        "saveInvestor": "Save investor"
+      },
+      "table": {
+        "empty": "No investors found...",
+        "head": {
+          "date": "Date",
+          "entityType": "Entity type",
+          "name": "Name",
+          "email": "Email",
+          "totalPayments": "Total payments",
+          "totalProducts": "Total products",
+          "status": "Status"
+        }
+      },
+      "view": {
+        "edit": {
+          "success": "Investor successfully updated"
+        },
+        "deactivate": "Deactivate account",
+        "delete": "Delete account",
+        "deactivateError": {
+          "title": "Unable to deactivate account",
+          "subtitle": "Deactivation is not possible because this investor still owns products."
+        },
+        "deactivateSuccess": {
+          "title": "Request for deactivation was sent!",
+          "subtitle": "Deactivation will be possible after approval"
+        },
+        "editDetails": {
+          "title": "Edit investor details",
+          "popup": {
+            "success": {
+              "title": "Request for updates are sent!",
+              "subtitle": "Changes will be applied after approval"
+            }
+          }
+        },
+        "details": {
+          "title": "Investor details",
+          "list": {
+            "firstName": "First name(s)",
+            "lastName": "Last name",
+            "companyName": "Company name",
+            "bsn": "BSN",
+            "status": "Status",
+            "createdOn": "Created on",
+            "entityType": "Entity type",
+            "email": "Email",
+            "phone": "Phone number",
+            "address": "Street address",
+            "postcode": "Postcode",
+            "city": "City"
+          }
+        },
+        "summary": {
+          "title": "Investor portfolio summary",
+          "list": {
+            "recieved": "Total received",
+            "payments": "Total original amount",
+            "holdings": "Total holdings",
+            "transactions": "Total transactions"
+          }
+        },
+        "holdings": {
+          "title": "Holdings",
+          "table": {
+            "empty": "No products yet...",
+            "head": {
+              "holding": "Holding",
+              "category": "Category",
+              "originalAmount": "Original amount",
+              "outstandingAmount": "Outstanding capital",
+              "amountRecieved": "Amount received",
+              "heldSince": "Held since",
+              "maturityDate": "Maturity date",
+              "nonCallPeriod": "Non-call period"
+            }
+          }
+        },
+        "transactions": {
+          "title": "Transactions",
+          "table": {
+            "empty": "No transsactions yet...",
+            "head": {
+              "date": "Date",
+              "type": "Type",
+              "investor": "Investor",
+              "product": "Product",
+              "amount": "Amount",
+              "status": "Status"
+            }
+          }
+        }
+      },
+      "investorCategory": {
+        "processing": "Processing",
+        "active": "Active",
+        "inactive": "Inactive",
+        "failed": "Failed",
+        "rejected": "Rejected",
+        "all": "All"
+      }
+    },
+    "products": {
+      "title": "Products",
+      "newProduct": "New Product",
+      "inputPlaceholder": "Search for a product",
+      "filters": {
+        "issuer": "Issuer",
+        "paymentType": "Payment Type",
+        "startCouponRate": "Start coupon rate",
+        "endCouponRate": "End coupon rate"
+      },
+      "productCategory": {
+        "all": "All",
+        "bond": "Bond",
+        "certificate": "Certificate",
+        "share": "Share"
+      },
+      "table": {
+        "empty": "No products found",
+        "head": {
+          "product": "Product",
+          "category": "Category",
+          "issuer": "Issuer",
+          "volume": "Available volume",
+          "ticketSize": "Ticket Size",
+          "paymentType": "Payment type",
+          "couponRate": "Coupon rate",
+          "maturity": "Maturity",
+          "status": "Status"
+        },
+        "foot": {
+          "show": "Showing {{from}} to {{to}} of {{total}} results",
+          "prevBtn": "Prev {{delta}}",
+          "nextBtn": "Next {{delta}}"
+        }
+      },
+      "form": {
+        "title": "New Product",
+        "subtitle": "Fill in the form below to create a new product.",
+        "productName": "Product name",
+        "totalVolume": "Total volume",
+        "quantity": "Quantity",
+        "ticketSize": "Ticket Size",
+        "issuer": "Issuer",
+        "selectIssuer": "Select an issuer",
+        "category": "Category",
+        "paymentType": "Payment type",
+        "paymentFrequency": "Payment frequency",
+        "listingDate": "Listing date",
+        "listingDatePlaceholder": "Select a date",
+        "categoryPlaceholder": "Select a category",
+        "submit": "Save product",
+        "couponRate": "Coupon rate",
+        "maturity": "Maturity",
+        "maturityUnit": "Maturity unit",
+        "nonCallPeriod": "Non-call period",
+        "nonCallPeriodUnit": "Non-call period unit",
+        "depository": "Depository",
+        "isin": "ISIN",
+        "categories": {
+          "certificate": "Certificate",
+          "bond": "Bond",
+          "share": "Share"
+        },
+        "paymentTypes": {
+          "dividend": "Dividend",
+          "interest": "Interest"
+        },
+        "paymentFrequences": {
+          "quarterly": "Quarterly",
+          "biannually": "Biannually",
+          "annually": "Annually"
+        }
+      },
+      "view": {
+        "deactivateProduct": "Deactivate Product",
+        "requestDelist": {
+          "success": {
+            "title": "Request for deactivation was sent"
+          },
+          "fail": {
+            "title": "Deactivation is not possible"
+          }
+        },
+        "headerTitle": "Products",
+        "productDetails": {
+          "title": "Product details",
+          "issuer": "Issuer",
+          "category": "Category",
+          "listingDate": "Listed on",
+          "maturity": "Maturity",
+          "nonCallPeriod": "Non-call period",
+          "paymentFrequency": "Payment frequency",
+          "depository": "Depository",
+          "isin": "ISIN"
+        },
+        "productOverview": {
+          "title": "Product overview",
+          "totalVolume": "Total volume",
+          "ticketSize": "Ticket Size",
+          "paymentType": "Payment type",
+          "couponRate": "Coupon rate",
+          "price": "Price",
+          "bar": {
+            "avialableVolume": "Available volume",
+            "volumeSold": "Volume sold",
+            "myHoldings": "My holdings",
+            "reserved": "Processing volume"
+          }
+        },
+        "myHoldings": {
+          "title": "My Holdings",
+          "listData": {
+            "recievedAmount": "Amount received total",
+            "originalAmount": "Original amount total",
+            "outstandingAmount": "Outstanding capital total"
+          },
+          "table": {
+            "emptyState": "No holdings yet...",
+            "head": {
+              "holding": "Holding",
+              "originalAmount": "Original amount",
+              "outstandingCapital": "Outstanding capital",
+              "recievedAmount": "Amount received",
+              "heldSince": "Held since",
+              "maturityDate": "Maturity date",
+              "nonCallPeriod": "Non-call period"
+            }
+          }
+        },
+        "documents": {
+          "title": "Documents",
+          "table": {
+            "emptyState": "No documents yet...",
+            "head": {
+              "document": "Document",
+              "lastUpdated": "Last updated"
+            }
+          }
+        },
+        "investors": {
+          "title": "Investors",
+          "table": {
+            "emptyState": "No investors yet...",
+            "head": {
+              "name": "Investor name",
+              "tickets": "Amount of tickets",
+              "amount": "Amount",
+              "status": "Status"
+            }
+          }
+        },
+        "transactions": {
+          "investorTitle": "My Transactions",
+          "title": "Transactions",
+          "returnTokens": "Returned tokens",
+          "table": {
+            "emptyState": "No transactions yet...",
+            "head": {
+              "investor": "Investor",
+              "tickets": "Tickets",
+              "date": "Date",
+              "type": "Type",
+              "amount": "Amount",
+              "status": "Status"
+            }
+          }
+        },
+        "requestBuy": {
+          "buttonText": "Request buy",
+          "form": {
+            "title": "Request buy",
+            "subtitle": "Please fill in the form below to express your interest in purchasing the product.",
+            "submit": "Submit buy request",
+            "infoFields": {
+              "price": "Price",
+              "ticketSize": "Ticket Size",
+              "product": "Product"
+            },
+            "inputFields": {
+              "quantity": {
+                "label": "Number of tickets",
+                "placeholder": "Enter number of tickets"
+              },
+              "amount": {
+                "label": "Purchase amount",
+                "placeholder": "Enter purchase amount"
+              }
+            },
+            "success": {
+              "title": "Buy requested",
+              "subtitle": "Your purchase interest has been registered. You will be contacted to formalize the purchase procedure."
+            }
+          }
+        }
+      },
+      "success": {
+        "title": "New product created",
+        "subtitle": "The product will be listed and visible to investors on your determined listing date."
+      }
+    },
+    "transactions": {
+      "title": "Transactions",
+      "investorTitle": "My Transactions",
+      "newTransaction": "New transaction",
+      "filters": {
+        "transactionType": "Transaction type",
+        "investor": "Investor",
+        "product": "Product",
+        "status": "Status"
+      },
+      "transactionsCategory": {
+        "processing": "Processing",
+        "processed": "Processed",
+        "failed": "Failed",
+        "rejected": "Rejected",
+        "all": "All"
+      },
+      "table": {
+        "empty": "No transactions found",
+        "head": {
+          "date": "Date",
+          "type": "Type",
+          "investor": "Investor",
+          "product": "Product",
+          "amount": "Amount",
+          "status": "Status"
+        }
+      },
+      "form": {
+        "title": "New Transaction",
+        "amountReceived": "Amount to be received",
+        "amountRepaid": "Amount to be repaid",
+        "subtitle": "Fill in the form below to create a new transaction for this investor.",
+        "transactionType": "Transaction type",
+        "purchaseAmount": "Purchase Amount",
+        "investor": "Investor",
+        "paymentType": "Payment Type",
+        "product": "Product",
+        "amount": "Amount",
+        "ticketSize": "Ticket Size",
+        "receiver": "Receiver",
+        "submit": "Submit transaction",
+        "price": "Price",
+        "quantity": "Quantity",
+        "transactionTypes": {
+          "buy": "Buy",
+          "sell": "Sell",
+          "payment": "Payment"
+        },
+        "amountPerFrequency": "Total amount paid per {{ paymentFrequency }}",
+        "amountRepayment": "Total volume sold",
+        "investorPlaceholder": "Select a investor",
+        "paymentTypePlaceholder": "Select a payment type",
+        "productPlaceholder": "Select a product",
+        "receiverPlaceholder": "Select a receiver",
+        "returnTokensToIssuer": "Return tickets to issuer",
+        "table": {
+          "head": {
+            "investor": "Investor",
+            "tickets": "Tickets",
+            "interestReceived": "Interest to be received",
+            "amountRepaid": "Amount to be repaid"
+          }
+        }
+      },
+      "success": {
+        "title": "New transaction submitted",
+        "subtitle": "The transaction was send for review."
+      },
+      "details": {
+        "title": "Transaction details",
+        "transactionHash": "Transaction hash",
+        "copyTransactionHash": "Transaction hash copied"
+      }
+    },
+    "complianceLog": {
+      "title": "Compliance log",
+      "approve": "Approve action",
+      "reject": "Reject",
+      "viewAll": "View all logs",
+      "table": {
+        "empty": "No compliance logs yet...",
+        "head": {
+          "date": "Date",
+          "relatedTo": "Related to",
+          "relatedBy": "Related by",
+          "action": "Action type",
+          "remarks": "Remarks",
+          "status": "Status"
+        }
+      },
+      "complianceStatus": {
+        "all": "All",
+        "initiated": "Initiated",
+        "accepted": "Accepted",
+        "rejected": "Rejected"
+      },
+      "rejectForm": {
+        "title": "Reject action",
+        "subtitle": "Please provide a reason for rejection below.",
+        "placeholder": "Remark",
+        "error": {
+          "title": "Oops! Something went wrong..."
+        }
+      },
+      "details": {
+        "title": "Compliance log details",
+        "transactionHash": "Transaction hash",
+        "copyTransactionHash": "Transaction hash copied"
+      }
+    },
+    "myAccount": {
+      "title": "My account",
+      "accountInformation": {
+        "title": "My account information",
+        "accountDetailsChanged": "Account-holder details can be changed only in writing or by e-mail. This is done for your protection.",
+        "accountType": "Account type",
+        "firstName": "First name(s)",
+        "lastName": "Last name",
+        "kvk": "KvK Number",
+        "companyName": "Company name",
+        "email": "Email",
+        "phoneNumber": "Phone number",
+        "bsn": "BSN",
+        "streetAddress": "Street address",
+        "postalCode": "Post code",
+        "city": "City",
+        "issuerName": "Issuer name",
+        "vat": "VAT ID"
+      },
+      "securityPreferences": {
+        "title": "My security preferences",
+        "text": "The following information is used for accessing and recovering your account.",
+        "email": "Email",
+        "phoneNumber": "Phone number",
+        "changePassword": "Change password",
+        "changeEmail": "Change email address",
+        "changePhone": "Change phone number"
+      },
+      "changePasswordPopup": {
+        "title": "Change password",
+        "subtitle": "To change your password, fill in your current password and new password twice.",
+        "newPassword": "New password",
+        "newPasswordPLaceholder": "Enter new password",
+        "repeatNewPassword": "Repeat new password",
+        "repeatNewPasswordPLaceholder": "Enter repeat new password",
+        "continue": "Continue"
+      },
+      "verifyPasswordPopup": {
+        "title": "Verify password",
+        "subtitle": "An email was sent to {{email}}. Enter the verification code in the email to continue.",
+        "verificationCode": "Verification code",
+        "verificationCodePLaceholder": "Enter verification code",
+        "resendIn": "Did not receive the code? Resend in",
+        "submit": "Verify and complete",
+        "success": {
+          "title": "Password changed",
+          "subtitle": "You can now log in or recover your account using the updated password."
+        }
+      },
+      "changeEmailPopup": {
+        "title": "Change email address",
+        "subtitle": "Enter the email address you want to associate your account with.",
+        "email": "Email address",
+        "emailPLaceholder": "Enter email address",
+        "continue": "Continue"
+      },
+      "verifyEmailPopup": {
+        "title": "Verify email address",
+        "subtitle": "An email was sent to {{email}}. Enter the verification code in the email to continue.",
+        "verificationCode": "Verification code",
+        "verificationCodePLaceholder": "Enter verification code",
+        "resendIn": "Did not receive the code? Resend in",
+        "submit": "Verify and complete",
+        "success": {
+          "title": "Email address changed",
+          "subtitle": "You can now log in or recover your account using the updated email address."
+        }
+      },
+      "changePhonePopup": {
+        "title": "Change phone number",
+        "subtitle": "Enter the phone number you want to associate your account with.",
+        "phone": "Phone number",
+        "save": "Save new phone",
+        "success": {
+          "title": "Phone number changed",
+          "subtitle": "You can now authenticate using the updated phone number."
+        }
+      }
+    }
+  }
+}

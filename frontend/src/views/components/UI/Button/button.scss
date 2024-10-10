@@ -1,0 +1,102 @@
+@import '../../../../styles/colors.scss';
+
+.button {
+  all: unset;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: 24px;
+  background: $primary;
+  box-shadow: 0px 8px 16px rgba(0, 153, 204, 0.16);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 24px;
+  opacity: 1;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  transition: all 0.1s linear;
+  transition-property: background, opacity;
+  user-select: none;
+
+  &_small {
+    height: 20px;
+    padding: 0.25rem 1rem;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &_link {
+    background-color: transparent;
+    border: none;
+    color: $primary;
+    box-shadow: none;
+  }
+
+  &_disabled {
+    background: $grey-dark;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.5 !important;
+    }
+  }
+
+  &_full-width {
+    width: calc(100% - 48px);
+  }
+
+  &_green {
+    background: $green;
+  }
+
+  &_redLayout {
+    background: transparent;
+    color: $red;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 40px;
+    box-shadow: none;
+  }
+
+  &-redBackground {
+    color: #ffffff;
+    background-color: $red;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 40px;
+    box-shadow: none;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &_unfilled {
+    color: $grey-dark;
+    background: none;
+    border: 1px solid #dcdcdc;
+    box-shadow: none;
+  }
+
+  &:hover {
+    opacity: 0.75;
+    transition: opacity 0.1s linear;
+  }
+
+  &:active {
+    background: #06698a;
+    opacity: 1;
+    transition: all 0.1s linear;
+    transition-property: background, color, opacity;
+  }
+}

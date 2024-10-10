@@ -1,0 +1,75 @@
+@import '../../../../styles/colors.scss';
+
+.tabs {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  &__container {
+    overflow-x: auto;
+    margin-bottom: 12px;
+    width: 100%;
+
+    span {
+      overflow-x: unset;
+      width: 100%;
+      height: 2px;
+    }
+
+  }
+
+  &__titles {
+    display: flex;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    padding: 0;
+    cursor: pointer;
+
+    &-item {
+      & + & {
+        margin-left: 24px;
+      }
+    }
+  }
+}
+
+.tab {
+  &__title,
+  &__addons {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  &__title {
+    color: $primary;
+    margin: 0;
+    display: inline-block;
+  }
+
+  &__addons {
+    margin-left: 8px;
+    color: $grey-middle;
+  }
+}
+
+.tabs__titles + span::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  width: 100%;
+  height: 2px;
+  background-color: #F5F5F5;
+}
+
+.tabs__titles + span::after {
+  content: '';
+  position: absolute;
+  top: 36px;
+  height: 2px;
+  background-color: #0099CC;
+  transition: all .3s ease;
+  overflow: hidden;
+}

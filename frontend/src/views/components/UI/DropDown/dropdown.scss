@@ -1,0 +1,184 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.dropdown {
+  height: 40px;
+  position: relative;
+  box-sizing: border-box;
+
+  &__title {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: $gap-xs $gap-m;
+    border-radius: 8px;
+    cursor: pointer;
+    gap: $gap-xs;
+
+    span {
+      @include font-size(12px, 16px);
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      right: -6px;
+      top: 0;
+      background-color: $red;
+      color: white;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+    }
+
+    svg {
+      margin-top: 2px;
+      path {
+        fill: $grey-dark;
+      }
+    }
+
+    &:hover {
+      background-color: $grey-light;
+
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+
+      h5 {
+        color: $primary;
+      }
+    }
+
+    h5 {
+      @include font-size(16px, 24px);
+      position: relative;
+      margin: 0;
+      color: $grey-dark;
+      font-weight: 400;
+
+      svg {
+        margin-top: $gap-xs;
+      }
+    }
+  }
+
+  &__container {
+    @include flex(column, flex-start, stretch);
+    box-sizing: border-box;
+    min-height: max-content;
+    max-height: calc(100vh - 150px);
+    width: 250px;
+    position: absolute;
+    right: 0;
+    top: 55px;
+
+    &-mobile {
+      height: calc(100vh - 75px);
+      max-height: inherit !important;
+      right: 0;
+      padding: 0;
+      width: calc(100vw - 84px);
+
+      .notifications__footer {
+        position: relative;
+        width: calc(100% + 65px);
+      }
+    }
+  }
+
+  &__items {
+    @include flex(column, flex-start, stretch);
+    box-sizing: border-box;
+    // width: 250px;
+    background-color: #fff;
+    // position: absolute;
+    box-shadow: 0px $gap-xs $gap-m rgba(0, 153, 204, 0.04);
+    border-radius: $gap-xs;
+    padding: $gap-m;
+    z-index: 100;
+    max-height: calc(100vh - 75px);
+    overflow-y: auto;
+
+    &-mobile {
+      position: relative;
+      // top: $gap-xs;
+      padding: 0;
+      width: 100vw;
+      min-height: max-content;
+      // max-height: calc(100vh - 200px);
+      overflow-x: clip;
+      overflow-y: auto;
+
+      .dropdown__item {
+        padding: $gap-xs $gap-m;
+      }
+    }
+  }
+
+  &__item {
+    @include flex(row, flex-start, center);
+    width: calc(100% - $gap-l);
+    min-height: 24px;
+    gap: $gap-s;
+    padding: $gap-xs $gap-s;
+    border-radius: $gap-xs;
+    cursor: pointer;
+
+    h6 {
+      color: $grey-dark;
+    }
+
+    &:hover {
+      background-color: $grey-light;
+
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+
+      h6 {
+        color: $primary;
+      }
+    }
+
+    &-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    &-content {
+      @include flex(row, flex-start, center);
+      height: 100%;
+      width: 100%;
+      min-height: 24px;
+      padding: 0;
+      margin: 0;
+
+      h6 {
+        @include font-size(16px, 24px);
+        margin: 0;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.normalSizeNotification span {
+    width: 22px;
+    height: 22px;
+    right: -11px;
+    top: -4px;
+}
+
+.bigSizeNotification span {
+  width: 27px;
+  height: 27px;
+  right: -17px;
+  top: -7px;
+}

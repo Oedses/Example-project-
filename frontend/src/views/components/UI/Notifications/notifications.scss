@@ -1,0 +1,84 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.notifications__item {
+  @include flex(row, space-between, flex-start);
+  padding: $gap-xs $gap-s;
+  gap: $gap-s;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: $grey-light;
+  }
+
+  &-content {
+    @include flex(column);
+  }
+
+  time {
+    @include font-size(14px, 22px);
+    color: $grey-dark;
+  }
+
+  &-title {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    @include font-size(16px, 24px);
+  }
+
+  &-link {
+    cursor: pointer;
+    color: $info;
+  }
+
+  &-unread {
+    flex: 0 0 8px;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: $primary;
+    margin-top: $gap-s;
+  }
+}
+
+.notifications__footer {
+  @include flex(column, space-between, center);
+  gap: 8px;
+  position: relative;
+  box-sizing: border-box;
+  width: 250px;
+  background-color: #ffffff;
+  z-index: 100;
+  padding: $gap-m;
+
+  button {
+    svg {
+      flex: 0 0 16px;
+      path {
+        fill: #808080;
+      }
+    }
+  }
+}
+
+.notification__dropdown-mobile {
+  right: 50px;
+
+  .dropdown__items {
+    width: calc(100vw - $gap-m);
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
+
+.notifications__footer--button {
+  height: auto !important;
+}
+
+.notifications__read-all {
+  text-align: center;
+  display: contents;
+}

@@ -1,0 +1,36 @@
+@import './../../../../styles/colors.scss';
+
+h2.content__heading {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  cursor: pointer;
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &-main {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+
+  &-secondary {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 0 24px 0;
+    padding: 0;
+  }
+
+  &-accent {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  color: $grey-dark;
+
+  &-active {
+    color: #000000;
+  }
+}

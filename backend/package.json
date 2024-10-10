@@ -1,0 +1,53 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "dev": "nodemon src/server.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/identity": "2.0.1",
+    "@koa/cors": "3.1.0",
+    "@microsoft/microsoft-graph-client": "3.0.1",
+    "@types/koa": "2.13.4",
+    "axios": "0.24.0",
+    "cron": "1.8.2",
+    "dotenv": "10.0.0",
+    "form-data": "4.0.0",
+    "generate-password": "1.7.0",
+    "isomorphic-fetch": "3.0.0",
+    "joi": "17.5.0",
+    "koa": "2.13.4",
+    "koa-body": "4.2.0",
+    "koa-morgan": "1.0.1",
+    "koa-passport": "4.1.4",
+    "koa-router": "10.1.1",
+    "mailgun.js": "4.1.0",
+    "mongodb": "4.1.4",
+    "ms-rest-azure": "3.0.1",
+    "passport-azure-ad": "4.3.1",
+    "ts-node": "10.4.0",
+    "typescript": "4.4.4",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "@microsoft/microsoft-graph-types": "2.10.0",
+    "@types/cron": "1.7.3",
+    "@types/koa__cors": "3.0.3",
+    "@types/koa-morgan": "1.0.5",
+    "@types/koa-passport": "4.0.3",
+    "@types/koa-router": "7.4.4",
+    "@types/mailgun-js": "0.22.12",
+    "@types/passport-azure-ad": "4.3.1",
+    "@typescript-eslint/eslint-plugin": "5.4.0",
+    "@typescript-eslint/parser": "5.4.0",
+    "eslint": "8.2.0",
+    "eslint-config-airbnb-typescript": "15.0.0",
+    "eslint-plugin-import": "2.25.3",
+    "nodemon": "2.0.15"
+  }
+}

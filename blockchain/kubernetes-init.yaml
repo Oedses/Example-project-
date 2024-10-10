@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bc-service
+  namespace: develop
+  labels:
+    project: "tokyo"
+    app: bc-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: "tokyo"
+      app: bc-service
+      env: dev
+  template:
+    metadata:
+      labels:
+        project: "tokyo"
+        app: bc-service
+        env: dev
+    spec:
+      containers:
+      - name: service
+        image: okjdockerreg.azurecr.io/TokyoCapital-bc-service-dev:1
+        ports:
+          - containerPort: 3001
+        imagePullPolicy: Always
+        volumeMounts:
+          - name: env
+            mountPath: "/app/.env"
+            subPath: .env
+            readOnly: true
+      restartPolicy: Always
+      priorityClassName: service
+      volumes:
+        - name:  env
+          configMap:
+            name: bc-env
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: bc-service
+  namespace: develop
+  labels:
+    project: "tokyo"
+spec:
+  selector:
+    app: bc-service
+    env: dev
+  type: ClusterIP
+  ports:
+  - name: app
+    port: 3001
+    targetPort: 3001

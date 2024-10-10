@@ -1,0 +1,157 @@
+@import '../../../../styles/colors.scss';
+
+.datepicker-container {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  border: 1px solid $grey-middle;
+  border-radius: 8px;
+  padding: 0 16px;
+
+  .e-input-group {
+    height: 44px;
+  }
+
+  .e-control-wrapper {
+    border: none !important;
+    margin: 0 !important;
+
+    .e-input {
+      font-size: 16px !important;
+      line-height: 24px !important;
+    }
+  }
+
+  &.form__full-width-datepicker {
+    width: 100%;
+  }
+
+  .date-picker {
+    height: 44px;
+    padding: 0 !important;
+
+    &-input,
+    &-date-group {
+      height: 44px !important;
+      border-radius: 8px !important;
+    }
+
+    &-input {
+      border: 1px solid $grey-middle !important;
+
+      .date {
+        border: none;
+        padding-left: 0 !important;
+        border-radius: 8px !important;
+      }
+
+      svg {
+        margin: 0 8px !important;
+        fill: $grey-dark;
+      }
+    }
+  }
+
+  &__with-error {
+    border: 1px solid $red !important;
+    .date-picker-input {
+      border: 1px solid $red !important;
+    }
+  }
+
+  & input::placeholder {
+    color: $grey-dark;
+  }
+
+  .react-date-picker {
+    width: 100%;
+  }
+
+  div.react-date-picker__wrapper {
+    border: none;
+  }
+}
+
+.react-date-picker__inputGroup__input {
+  outline: none;
+
+  &:invalid {
+    background: none;
+  }
+}
+
+.datepicker {
+  height: 36px;
+  border: 1px solid $grey-middle;
+  border-radius: 8px;
+  padding: 0 16px 0 40px;
+  outline: none;
+
+  &:focus {
+    border-color: $primary;
+  }
+
+  &::placeholder {
+    color: $grey-middle;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.25;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 33px;
+    left: 16px;
+    z-index: 1;
+  }
+
+  &__error {
+    position: absolute;
+    left: 0;
+    // margin-top: 47px;
+    color: $red;
+    text-align: left;
+    font-size: 14px;
+    animation: errors 0.1s ease-in-out;
+  }
+}
+
+  .e-input-group:not(.e-float-icon-left):not(.e-float-input)::before {
+    display: none !important;
+  }
+
+  .e-date-wrapper span.e-input-group-icon.e-date-icon.e-icons.e-active {
+    color: $primary !important;
+  }
+
+  .e-input-group:not(.e-float-icon-left):not(.e-float-input)::after, .e-input-group.e-control-wrapper:not(.e-float-icon-left):not(.e-float-input)::after {
+    display: none !important;
+  }
+
+  .e-calendar .e-content td:hover span.e-day, .e-calendar .e-content td:focus span.e-day, .e-bigger.e-small .e-calendar .e-content td:hover span.e-day, .e-bigger.e-small .e-calendar .e-content td:focus span.e-day {
+    background-color: $primary !important;
+    color: #000000 !important;
+  }
+
+.e-selected span {
+  background-color: $primary !important;
+}
+
+.e-focused-date span {
+  border: 1px solid $primary !important;
+  color: #000000 !important;
+}
+
+.e-today span {
+  border: 1px solid $info !important;
+  color: $info !important;
+  background-color: #eee !important;
+}
+
+.e-btn {
+  color: $primary !important;
+
+  &:hover, &:focus {
+    background-color: $info !important;
+  }
+}

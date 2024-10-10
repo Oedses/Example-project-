@@ -1,0 +1,34 @@
+@import './../../components/UI/List/list.scss';
+@import './../../components/UI/List/ListItem/list-item.scss';
+
+.my-account {
+    .form__text-start {
+        text-align: left;
+    }
+
+    h2.content__heading-secondary {
+        margin: 0;
+    }
+
+    &__max-width {
+        max-width: 966px;
+    }
+
+    &__section {
+        margin-bottom: 24px;
+    }
+
+    &__actions-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .form__row-container div {
+        flex: 0 0 50%;
+    }
+
+    .text-pointer {
+        cursor: pointer;
+    }
+}

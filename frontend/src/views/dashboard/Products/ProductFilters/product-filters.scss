@@ -1,0 +1,31 @@
+@import './../../../../styles/colors.scss';
+@import './../../../../styles/mixins.scss';
+
+.product-filters {
+  @include flex();
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  .select-container {
+    width: 145px;
+  }
+
+  .input-container {
+    width: 145px;
+  
+    .coupon-rate {
+      height: 63px;
+
+      .label {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .button-container {
+    margin-top: 20px;
+  }
+}

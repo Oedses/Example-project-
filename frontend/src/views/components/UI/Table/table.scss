@@ -1,0 +1,265 @@
+@import "../../../../styles/colors.scss";
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
+
+.table {
+  width: 100%;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  &__column--centered {
+    * {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    &.sort-default,
+    &.ascending,
+    &.descending {
+      div {
+        @include flex(row, center, center);
+      }
+    }
+
+  }
+
+  &__string-with-link {
+    z-index: 200;
+    cursor: pointer;
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: -75%;
+    width: fit-content;
+    height: fit-content;
+    left: 0;
+    display: none;
+    z-index: 99999;
+
+    &--open {
+      display: block;
+    }
+  }
+
+  &-cell {
+    &__currency {
+
+      span {
+        display: block;
+        width: fit-content;
+      }
+    }
+
+    &__centered {
+      // @include flex(row, center, center);
+
+      span {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      p {
+        justify-content: center;
+      }
+    }
+  }
+
+  &-wrapper {
+    overflow-x: auto;
+  }
+
+  & thead {
+    background: $grey-light;
+    color: $grey-dark;
+
+    tr {
+      position: relative;
+      height: 100%;
+      td {
+        padding: 8px;
+        height: 100%;
+
+        div {
+          @include flex(row, flex-start, center);
+        }
+
+        &.sort-default {
+          span {
+            display: inline-block;
+            width: max-content;
+            position: relative;
+            padding-right: 30px;
+
+            &::after {
+              // content: '◉';
+              content: '◎';
+              position: absolute;
+              right: 0;
+              top: calc(50% + 2px);
+              transform: translateY(-50%);
+              color: $grey-middle;
+            }
+          }
+
+        }
+
+        &.ascending,
+        &.descending {
+          div {
+            @include flex(row, flex-start, center);
+          }
+          svg {
+            margin-left: $gap-xs;
+
+            path {
+            fill: $grey-middle;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & tbody {
+    tr {
+      border-bottom: 1px solid $grey-light;
+
+      th {
+        padding: 16px 20px;
+      }
+
+      td {
+        padding: 0 8px;
+        border-bottom: 1px solid $grey-light;
+        position: relative;
+        width: fit-content;
+
+        p {
+          margin: $gap-m 0;
+          display: flex;
+          align-content: flex-start;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .with-tooltip {
+    &::before {
+      content: attr(data-tooltip);
+      position: absolute;
+      padding: $gap-xs $gap-m;
+      top: -20px;
+      left: 0;
+      width: max-content;
+      background-color: #ffffff;
+      color: #000000;
+      z-index: -1;
+      border: 1px solid $grey-light;
+      box-sizing: border-box;
+      box-shadow: 0px 8px 16px rgba(0, 153, 204, 0.04);
+      border-radius: 8px;
+    }
+
+    &:hover {
+      &::before {
+        z-index: 100;
+      }
+    }
+  }
+
+  &__string,
+  &__link {
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__string {
+    &--with-number {
+      text-align: center;
+    }
+  }
+
+  &__colored-string {
+    color: $grey-dark;
+
+    &-green {
+      color: $green;
+    }
+
+    &-red {
+      color: $red;
+    }
+
+    &-gray {
+      color: $grey-dark;
+    }
+  }
+
+  &__status-wrapper {
+    display: flex;
+    align-items: center !important;
+  }
+
+  &__status {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 12px;
+
+    &_active,
+    &_fulfilled,
+    &_processed,
+    &_accepted {
+      background: $green;
+    }
+
+    &_processing,
+    &_initiated {
+      background: $primary;
+    }
+    &_finalizing,
+    &_failed {
+      background: $orange;
+    }
+
+    &_rejected {
+      background: $red;
+    }
+
+    &_inactive,
+    &_pending {
+      background: $grey-dark;
+    }
+  }
+
+  &__currency-icon {
+    margin-right: 5px;
+  }
+
+  &__link {
+    color: $primary !important;
+    cursor: pointer;
+  }
+
+  &__pointer {
+    cursor: pointer;
+  }
+  
+  &__date {
+    min-width: 90px;
+    flex: 0 0 90px;
+  }
+}
+
+.inactive {
+  background-color: red;
+}
